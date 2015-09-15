@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" value="notranslate">
+
+
+    <title>Nazaire Art & Design Studio</title>
+
+  
+  <script src="lib/jquery-2.0.3.js"></script>
+  <script src="src/js/jquery.swipebox.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+
+
+  <link rel="stylesheet" href="src/css/swipebox.css">
+  <link rel="stylesheet" href="//codepen.io/assets/reset/normalize.css">
+  <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+
+    
+        <style>
+      html,
+body {
+  height: 100%;
+  line-height: 1.5;
+}
+.wrap {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+main {
+  -webkit-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+@media (max-width: 800px) {
+  main {
+    -webkit-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+      
+  }
+}
+aside,
+article {
+  overflow-y: scroll;
+  padding: 2em;
+}
+aside {
+  -webkit-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #f7f7f7;
+background: #f0eeee;
+color: #4f4f4f; 
+ font-family: Helvetica Neue, Arial, Verdana, sans-serif;
+    font-size: 11px;
+    
+}
+article {
+  -webkit-box-flex: 2;
+  -o-box-flex: 2;
+  box-flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  background: #f0eeee;
+    color: #4f4f3f; 
+ font-family: Helvetica Neue, Arial, Verdana, sans-serif;
+    font-size: 13px;
+}
+h1 {
+  margin-top: 0;
+    
+}
+h3 { color: #bdbdbd; 
+ font-family: Helvetica Neue, Arial, Verdana, sans-serif;
+    font-size: 11px; font-weight: normal;
+    text-decoration: none;
+  }
+p {  color: #4f4f4f; 
+ font-family: Helvetica Neue, Arial, Verdana, sans-serif;
+font-size: 12px;  text-decoration: none;}
+            
+ a:link { color: #bdbdbd; text-decoration: none;}
+a:visited { color: #bdbdbd; text-decoration: none; }
+a:hover { color: #333333; text-decoration: none; }          
+            
+img{ max-width:100%;}            
+   
+
+#index, #exhibit { font-size: 11px; }
+#index, #exhibit { line-height: 14px; }
+
+#index  { color: #4f4f4f; }
+#index  { font-family: Helvetica Neue, Arial, Verdana, sans-serif; }
+#index ul.section span.section_title, #index ul.section span.section_title a, #index ul.section span.subsection_title, #index ul.section span.subsection_title a { font-weight: bold; }
+#index ul.section span.section_title, #index ul.section span.section_title a, #index ul.section span.subsection_title, #index ul.section span.subsection_title a { font-size: 13px; }
+body { background-color: #f2f2f2; }
+#img-container {  }
+#img-container #text { float: left; width: 285px; }
+#img-container #text p { width: 250px; }
+#img-container .picture_holder { float: left; }
+#img-container .picture { position: relative; text-align: left; }
+#img-container .picture { width: 300px; height: 300px; }
+#img-container .picture_holder { padding: 0 0 0 0; }
+#img-container .captioning { height: 0px; text-align: center;width: 300px; }
+#img-container .captioning .title { margin-top: 3px; text-align: left; }            
+
+    </style>
+
+ <script type="text/javascript">
+
+
+
+ var player = videojs('really-cool-video', { /* Options */ }, function() {
+  console.log('Good to go!');
+
+  this.play(); // if you don't trust autoplay for some reason
+
+  // How about an event listener?
+  this.on('ended', function() {
+    console.log('awww...over so soon?');
+  });
+});
+
+
+
+    </script>
+
+    
+  </head>
+
+  <body>
+
+
+    <div class="wrap">
+  
+  <main>
+    
+    <aside>
+        <h1><a href="index.html"><img src="nad_logo.gif"></a></h1>
+      <h3>
+    <a href="print.html">Print</a>
+      </h3>
+    
+         <h3>
+    <a href="web.html">Websites</a>
+      </h3>
+         <h3>
+    <a href="video.html">Videos + Animations</a>
+      </h3>
+        <h3>
+    <a href="draw.html">Drawings + Sketches</a>
+      </h3>
+         <h3>
+   <a href="resume.html">Resumé/CV</a>
+      </h3>
+          <h3>
+<a href="http://nazairelife.tumblr.com">NazaireLife</a>
+      </h3>
+         <h3>
+    Parsons School of <br> Design: MFA D+T
+      </h3>
+          <h3>
+  <a href="https://society6.com/nazartdesignstudio">Society6</a>
+      </h3>
+          <h3>
+ <a href="contact.html">Contact</a>
+      </h3>
+    </aside>
+    
+    <article>
+      <h1>Shift In Feeling (Toro Y Moi)</h1>
+      <h3>Shift in Feeling is an exploratory MFA Major Studio project aimed at captivating an idea within 7 states, completed in 7 days. 
+
+This project explores the impact of visual sensation through tilt shift edited video that is correlated with music produced by artist Toro Y Moi. The videos are produced to capture the fluctuating feelings of being young, cathartic and restless in the city or going about the everyday hustle and bustle. The varying synths and riffs in Toro Y Moi's music along with thoughtful lyrics will correlate with the footage to create an artistic music video experience while having the challenge of producing tilt shift effects that create a deeper, imaginative narrative.
+
+The 'rules' set up for the project are the following:
+
+-Every video is accompanied by music produced by Toro Y Moi, a musician who's genre varies from alternative rock to soulful electronic groove.
+
+-7 videos are produced with the tilt shift effect applied.
+
+-The videos must capture scenery in New York, from an elevated angle.
+
+- The video must somehow relate to the lyrics or theme of the song that accompanies it (timing, tone and mood primarily).
+
+-Each video must range from 20-30 seconds each.
+
+
+7 Places to Shoot:
+
+-UWAY Cafe Upper Level
+
+-Construction Site: rooftop access?
+
+-Rooftop Party to film traffic below.
+
+-Central Park, Bryant Park Scenery
+
+-Office Space seen from a higher floor: Where?
+
+-Brooklyn block with tons of graffiti: Graffiti artists working.
+
+-New School gathering: film from a floor above in main building.
+
+-Restaurant with people eating or outdoor cafe.
+
+-Varick Ave. residence Rooftop: Capture the Doe Knows signage area.</h3>
+
+      <p> Got Blined</p>
+     <video id="gotblinded" class="video-js vjs-default-skin" controls
+ preload="auto" width="640" height="264" poster=".jpg"
+ data-setup='{}'>
+  <source src="gotblinded.mp4" type='video/mp4'>
+  <source src="gotbinded.webm" type='video/webm'>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser
+    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+
+      <p> Grown Up Calls</p>
+     <video id="grownupcalls" class="video-js vjs-default-skin" controls
+ preload="auto" width="640" height="264" poster=".jpg"
+ data-setup='{}'>
+  <source src="grownupcalls.mp4" type='video/mp4'>
+  <source src="grownupcalls.webm" type='video/webm'>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser
+    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+      <p> Fetch</p>
+     <video id="fetch" class="video-js vjs-default-skin" controls
+ preload="auto" width="640" height="264" poster=".jpg"
+ data-setup='{}'>
+  <source src="fetch.mp4" type='video/mp4'>
+  <source src="fetch.webm" type='video/webm'>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser
+    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+      <p> Movements</p>
+     <video id="movements" class="video-js vjs-default-skin" controls
+ preload="auto" width="640" height="264" poster=".jpg"
+ data-setup='{}'>
+  <source src="movements.mp4" type='video/mp4'>
+  <source src="movements.webm" type='video/webm'>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser
+    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+      <p> How I Know</p>
+     <video id="howiknow" class="video-js vjs-default-skin" controls
+ preload="auto" width="640" height="264" poster=".jpg"
+ data-setup='{}'>
+  <source src="howiknow.mp4" type='video/mp4'>
+  <source src="howiknow.webm" type='video/webm'>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser
+    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+      <p> Campo</p>
+     <video id="campo" class="video-js vjs-default-skin" controls
+ preload="auto" width="640" height="264" poster=".jpg"
+ data-setup='{}'>
+  <source src="campo.mp4" type='video/mp4'>
+  <source src="campo.webm" type='video/webm'>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser
+    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+
+      <p> Touch</p>
+     <video id="touch" class="video-js vjs-default-skin" controls
+ preload="auto" width="640" height="264" poster=".jpg"
+ data-setup='{}'>
+  <source src="touch.mp4" type='video/mp4'>
+  <source src="touch.webm" type='video/webm'>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a web browser
+    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p>
+</video>
+
+      </p>
+    </article>
+
+
+    
+  </main>
+  
+</div>
+    
