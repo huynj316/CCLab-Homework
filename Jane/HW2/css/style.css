@@ -1,0 +1,50 @@
+body{
+	width: 100vw;
+	background-color: mediumaquamarine;
+	margin: none;
+}
+
+header{
+	position: relative;
+	font-family: Gotham Black, sans-serif;
+	font-weight: bolder;
+	color: white;
+	font-size: 63px;
+	width: 50vw;
+	float: right;
+	top: 8vh;
+	right: 2vw;
+}
+#heart{
+	position: absolute;
+	width: 20vw;
+	margin-bottom: 10vh;
+	top:45vh;
+	left: 36vh;
+}
+#heart #heart2{
+	width: 70%;
+}
+#man{
+	position: absolute;
+	width: 40vw;
+	left:8vw;
+	top: 8vh;
+	z-index: -1;
+}
+#man img{
+	width: 95%;
+	opacity: 0.8;
+}
+#description{
+	position: absolute;
+	width: 35vw;
+	left: 17vw;
+	top:100vh;
+	font-family: Gotham Black, sans-serif;
+	color: white;
+	margin-bottom: 18vh;
+}
+#description p{
+	font-size: 25px;
+}
