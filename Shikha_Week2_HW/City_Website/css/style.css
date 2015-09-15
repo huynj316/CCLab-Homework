@@ -1,0 +1,152 @@
+body{
+	text-align: center;
+	background-color: #1A2434;
+	padding: 0;
+	margin: 0;
+}
+
+
+#navigation{
+	display: inline-block;
+	text-align: center;
+	font-family: Avenir;
+	color: #FF005E;
+	text-decoration: none;
+}
+
+
+nav a {
+	text-decoration: none;
+	color: #FF005E;
+
+
+}
+
+nav a:hover{
+	color: #fff;
+}
+
+nav li {
+	display: inline-block;
+	font-family: Avenir;
+	font-size: 0.8em;
+    text-align: center;
+	letter-spacing: 4px;
+	position: relative;
+	list-style: none;
+	margin: 15px 30px;
+	z-index: 1;
+}
+
+.intro{
+	
+	width:100%;
+	height: 678px;
+	padding:0;
+	margin:0;
+	
+}
+
+
+
+#logo{
+	width: 30vw;
+	height: auto;
+	margin-top: 5vh;
+	position:relative;
+}
+
+p{
+	color: #616c84;
+	font-family: Avenir;
+	line-height: 8vh;
+	font-size: 1.5em;
+	margin-left: 14vw;
+	margin-right: 14vw;
+	margin-top: 5vw;
+	position: relative;
+}
+
+#downButton{
+	width: 7vw;
+	height: auto;
+	margin-top: 15vh;
+
+
+}
+
+#downButton img:hover{
+	color: #FFF;
+	opacity: 0.5;
+	cursor: pointer;
+
+}
+
+#Mumbai{
+	width: 100%;
+	height:650px;
+	margin:0;
+	padding:0;
+	position: relative;
+}
+
+#Mumbai p{
+	color: #616c84;
+	font-family: Avenir;
+	line-height: 5vh;
+	font-size: 1.15em;
+	margin-left: 22vw;
+	margin-right: 22vw;
+	margin-top: -5vh;
+	margin-bottom: 0;
+	position: relative;
+
+}
+
+#Layer_1{
+	position: relative;
+	margin-top:-15vh;
+}
+
+#play{
+	width: 4vw;
+	height: auto;
+	margin-right: 5vw;
+	margin-top: -18vh;
+
+}
+
+#play img:hover{
+	color: #FFF;
+	opacity: 0.5;
+	cursor: pointer;
+
+}
+
+
+#pause{
+	width: 4vw;
+	height: auto;
+	margin-left: 5vw;
+	margin-top: -8.2vh;
+
+}
+
+#pause img:hover{
+	color: #FFF;
+	opacity: 0.5;
+	cursor: pointer;
+
+}
+
+#city{
+	display:none;
+	font-family: Blanch;
+	font-size: 6em;
+	color: white;
+	margin-top: 1vh;
+	text-align:center;
+	position:relative;
+}
+
+
