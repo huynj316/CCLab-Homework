@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Economica:400,700);
+
+#header{
+	width: 40vw;
+	height: 10vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#myCanvas{
+	background-image:url("1.JPG");
+	background-position: center;
+
+}
+
+canvas{
+	padding-left: 0;
+    padding-right: 0;
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+	width: 75vw;
+	height: 60vh;
+	margin: center;
+
+}
+
+h1{
+	font-family: 'Economica', sans-serif;
+	text-align: center;
+}
+
+#foot{
+	width: 200px;
+	height: 50px;
+	margin-top: 5vh;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10%;
+}
+
+h2{
+	padding: 5%;
+	font-family: 'Economica', sans-serif;
+	text-align: center;
+	border: 2px solid lightgray;
+}
+
+#refresh:hover{
+	color:lightgray;
+
+}
+
+h3{
+	font-family: 'Economica', sans-serif;
+	text-align: center;
+}
