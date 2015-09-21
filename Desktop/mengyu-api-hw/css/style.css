@@ -1,0 +1,28 @@
+body{background: #290A07; padding: 0; margin: 0;}
+
+.ui-autocomplete{color:#D43B73;}
+
+.cao-widget{width: 500px; height: 400px; margin: 0 auto; font-family: Arial, sans-serif;}
+
+.cao-widget .weather{overflow: auto; background: white; color: #D43B73;}
+.weather h1{font-size: 25px; margin: 20px 0 0 20px;}
+.weather h2{font-size: 18px; margin: 2px 0 0 20px; font-weight: normal;}
+.weather .description{font-size: 18px; margin: 2px 0 0 20px;}
+.weather ul{overflow: auto; margin:0; padding: 0; list-style-type: none;}
+.weather li.icon{float:left; width: 85px; height: 85px; margin-left: 10px;}
+.weather li.icon img{display: block; margin-left: auto; margin-right: auto; margin-top: 15px; vertical-align: middle;}
+.weather li.temperature{float: left; width: 170px; height: 85px; margin-left: 20px; padding-top: 10px; text-transform: uppercase; position: relative; font-family: Arial Black, sans-serif;}
+.weather li.temperature strong{font-size: 40px;}
+.weather li.temperature span{font-size: 16px; position: absolute; top: 20px; margin-left: 5px;}
+.weather li.temperature span i{font-style: normal;}
+.weather li.temperature span a{color: #333;}
+.weather li.detail{padding-top: 22px;}
+.weather li.detail p{margin: 0 0 5px 0; padding: 0;}
+
+.cao-widget .location{margin-top: 1px; overflow: auto; width: inherit;}
+.location .city{float: left; width: 495px; height: 24px; font-size: 15px; padding-left: 5px; border: none; border-radius:0; color:#D43B73; text-transform: capitalize;}
+.location .city:focus{outline: none;}
+.location .state{float: left; height:26px; font-size: 12px; color: #D43B73; border: none;}
+.location .state:focus{outline: none;}
+.location .query{width: 60px; height: 27px; margin-left: 1px; font-size: 12px; text-transform: uppercase; color: #e2e2e2; background: #D43B73; border: none; cursor: pointer;}
+.location .query:focus{outline: none;}
