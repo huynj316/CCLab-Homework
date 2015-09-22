@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Weather Widget</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	</head>
+	<body>
+		<div class="cao-widget">
+			<section class="weather">
+				<h1 id="w-location">Loading...</h1>
+				<h2 id="w-date">-</h2>
+				<div class="description" id="w-description">-</div>
+				<ul>
+					<li class="icon" id="w-icon">
+						<img src="http://icons.wxug.com/i/c/k/partlycloudy.gif" />
+					</li>
+					<li class="temperature" id="w-temperature"><strong>.</strong><span><i>°F</i>&nbsp;|&nbsp;<a href="javascript:void(0);">°C</a></span></li>
+					<li class="detail" id="w-detail">
+					<p></p>
+					<p></p>
+					<p></p>
+					</li>
+				</ul>
+			</section>
+			<section class="location">
+				<input type="text" class="city" id="l-city" value="New York, NY, United States">
+				<!-- <input type="button" class="query" id="l-query" value="go"> -->
+			</section>
+			
+		</div>
+		<script src="lib/jquery-2.1.4.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script src="app/main.js"></script>
+	</body>
+</html>

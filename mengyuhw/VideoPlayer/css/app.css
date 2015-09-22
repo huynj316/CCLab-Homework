@@ -1,0 +1,6 @@
+body{margin: 0; padding: 0; overflow:hidden; background: #000;}
+
+.cao-container{margin: 0; padding: 0; position: relative;}
+.cao-playlist{position: absolute; padding: 0; list-style-type: none;}
+.cao-playlist li{display: inline-block; border: 1px solid #FFF; color: #FFF; }
+.cao-video{margin: 0; padding: 0;}
