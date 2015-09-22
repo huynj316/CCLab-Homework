@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,300);
+
+html, body {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    /*background-color: rgb(34, 34, 49);
+*/
+	background-color: black;
+}
+
+h1{
+	text-align: center;
+	font-family: Dosis;
+	font-size: 4em;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: #1FBAD6;
+}
+
+p{
+	text-align: center;
+	font-family: Avenir;
+	line-height: 8vh;
+	letter-spacing: 1px;
+	font-size: 20px;
+	color: white;
+}
+
+#map {
+     width: 95%;
+     height: 61%;
+     margin-top: 5vh;
+     margin-left: 2.5vw;
+     border-color: white;
+}
+
+.divider {
+    display: block;
+    width: 95%;
+    height: 2px;
+    margin-top: -3vh;
+    opacity: 1;
+    background-color: #4e4e57;
+    position: relative;
+}
+
+.search-span-wrapper {
+    height: 75px;
+    margin-top: 15vh;
+    margin-left: 2.5vw;
+}
+
+.search-span-wrapper {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+
+.search {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-family: Avenir;
+    font-size: 30px;
+    outline: none;
+    color: #1FBAD6;
+    letter-spacing: 1px;
+}
+
+
+input {
+    font-family: Avenir;
+    color: #1FBAD6;
+}
+
+.address{
+	width: 20vw;
+	height: 5.8vh;
+	border: solid 2px #4e4e57;
+	background: transparent;
+	margin-top: 8vh;
+	font-family: Avenir;
+	font-size: 1em;
+	text-align: center;
+	letter-spacing: 0.06vw;
+	margin-left: 0.6vw;
+}
+
