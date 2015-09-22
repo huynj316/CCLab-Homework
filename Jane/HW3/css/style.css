@@ -1,0 +1,87 @@
+html, body { 
+    height: 100%;
+    margin: 0; 
+    padding: 0; 
+    background-color: white;
+}
+h1{
+  background-color: coral;
+  position: absolute;
+  width: 100vw;
+  height: 20vh;
+  padding-top: 3vh;
+  padding-left: 2vw;
+  font-family: Gotham;
+  font-weight: bolder;
+  font-size: 102px;
+  color: white;
+  top: -11vh;
+  text-align: left;
+  }
+
+  li a {text-decoration : none; color : coral;}
+
+
+#meal{
+  position: relative;
+  float: right;
+  top: -6vh;
+  width : 15vw; 
+  background: coral; 
+  padding-top: 10px;
+  margin : 35px auto; 
+  z-index: 1;
+}
+
+
+span {
+  padding-top:60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background : #coral; 
+  color : white;
+  font-size : 1.2em;
+  font-variant : small-caps;
+  cursor : pointer;
+  display: block;
+}
+
+span::after {
+  float: right;
+  right: 10%;
+  content: "+";
+}
+
+
+.slide {
+  clear:both;
+  width:20vw;
+  height:0px;
+  overflow: hidden;
+  /*text-align: center;*/
+  list-style: none;
+  transition: height .4s ease;
+}
+
+.slide li {
+  padding : 20px;
+  margin-right: 90px;
+}
+
+.slide li a{color: white; width:10vw;}
+
+
+#touch {position: absolute; opacity: 0; height: 0px;}    
+
+#touch:checked + .slide {
+  height: 220px;
+  padding: 10px;
+}
+
+#map { 
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 21vh;
+}
+   
