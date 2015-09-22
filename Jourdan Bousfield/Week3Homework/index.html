@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title> Image Findr</title>
+      <link rel="stylesheet" href="style/layout.css" />
+      <link rel="stylesheet" href="style/gallery.css" />
+      <link rel="stylesheet" href="style/thumbnails.css" />
+      <link rel="stylesheet" href="style/homepage.css" />
+   </head>
+   <body>
+      <header class="island">
+         <h1>Find the Perfect Picture</h1>
+         <form class="js-form-search form-search" action="/search" method="get" role="search">
+            <label for="query">Search:</label>
+            <input type="search" name="query" id="query" placeholder="Search" required />
+            <input type="submit" value="Search" />
+         </form>
+      </header>
+
+      <div class="island">
+         <p>Search until you find exactly what you are looking for!</p>
+         <div class="js-gallery gallery">
+            <img src="" class="js-gallery__image" />
+            <button class="js-gallery__arrow--left gallery__arrow gallery__arrow--left">
+            </button>
+            <button class="js-gallery__arrow--right gallery__arrow gallery__arrow--right">
+            </button>
+         </div>
+      </div>
+
+      <div class="island thumbnails">
+         <ul class="js-thumbnails__list thumbnails__list"></ul>
+         <ol class="js-thumbnails__pager thumbnails__pager"></ol>
+      </div>
+      
+      <footer>
+         
+      </footer>
+      <script src="js/utility.js"></script>
+      <script src="js/gallery.js"></script>
+      <script src="js/flickr.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/jquery/jquery-1.11.1.js"></script>
+   </body>
+</html>
+
+<!-- Sourced from Aurelio De Rosa, "Creating an Image Gallery with the Flickr API — Requirements and Markup" Feb 16, 2015 -->
