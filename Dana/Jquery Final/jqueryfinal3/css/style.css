@@ -1,0 +1,171 @@
+body {
+	margin:0;
+	width:100vw;
+}
+
+header {
+	position:fixed;
+	top:0;
+	width:100vw; /*sets witdh of viewport*/
+	height:100px;
+	background-color:rgba(255,255,255,.8);
+	z-index:500;
+	margin-bottom: 100px;
+}
+
+header nav {
+	float:right;
+	line-height:30px;
+	margin:35px 35px;
+
+}
+
+header nav a {
+	color:silver;
+	font-size:20px;
+	font-style: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-left:20px;
+}
+
+
+header nav a:hover{
+color:teal;
+font-size:24px;
+}
+
+#logo {
+	position:absolute;
+	width:100px;
+	height:100px;
+	top:25px;
+	left:50px;
+	float:left;
+	padding:10px;
+
+	/*animation-name: bounce;
+	animation-duration:1s;*/
+	
+}
+
+section {
+	/*margin-top:100px;*/
+	margin-bottom:0px;
+}
+
+section p {
+	background-color: silver;
+	color:#000000;
+	padding:50px;
+	margin:0px;
+	font-size: 18px;
+}
+
+section a {
+	text-decoration: none;
+	color:teal;
+}
+
+#about{
+	margin-top:100px;
+	
+}
+
+#map {
+  position: relative;
+  left: 0vw;
+  
+  /*
+  This doesn't work
+  margin-left: -25%;
+  margin-top: -25%;
+  */
+  
+  width: 100vw;
+  height: 500px;
+  padding: 20px;  
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); 
+
+}
+
+footer {
+	background-color: black;
+	margin-top:-8px;
+	margin-bottom:0px;
+}
+
+footer p {
+	background-color: black;
+	color:#ffffff;
+	padding:50px;
+	margin:0px;
+}
+
+@keyframes bounce {
+
+0% {
+	transform:translateY(-100%);
+	opacity:0;
+}
+
+5% {
+	transform:translateY(-100%);
+	opacity:0;
+}
+
+15% {
+    transform:translateY(0);
+    padding-bottom: 5px;
+}
+
+30% {
+    transform:translateY(-50%);
+}
+
+40% {
+  	transform:translateY(0%);
+    padding-bottom: 6px;
+}
+
+50% {
+    transform:translateY(-30%);
+}
+
+70% {
+    transform:translateY(0%);
+    padding-bottom: 7px;
+}
+80% {
+    transform:translateY(-15%);
+}
+
+90% {
+    transform:translateY(0%);
+    padding-bottom: 8px;
+}
+
+95% {
+    transform:translateY(-7%);
+}
+
+97% {
+    transform:translateY(0%);
+    padding-bottom: 9px;
+}
+
+99% {
+    transform:translateY(-3%);
+}
+
+100% {
+    transform:translateY(0);
+    padding-bottom: 9px;
+    opacity: 1;
+}
+
+
+}
+
+
