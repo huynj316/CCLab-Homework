@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Coming Soon</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="tools/jquery.min.js"></script> 
+<script type="text/javascript" src="tools/cufon-yui.js"></script>
+<script type="text/javascript" src="tools/Akzidenz-Grotesk_BQ_500-Akzidenz-Grotesk_BQ_500-Akzidenz-Grotesk_BQ_italic_700.font.js"></script>
+<script type="text/javascript" src="tools/FontSoupGerman_700.font.js"></script>
+<script type="text/javascript" src="tools/library.js"></script>
+<script type="text/javascript" src="tools/weather.js"></script>
+
+
+</head>
+
+
+<body>
+<div id="wrapper">
+	<div class="main_content">
+		<div class="uppersection">
+			<div class="logo"></div>
+			<h2><strong>FAIRY TALE</strong> <br/>create your own <span>'story'</span></h2>
+			<p>Background change with weather.</p> <br />
+            <div class="top" align="center">
+            <a class="button" href="#canvas" > Empezar</a><br />
+            </div>
+			</div>
+        <a name="#canvas"> 
+        
+        <br/> <br/><br/> 
+      </div>
+         
+         
+        
+        <a name="#canvas"> 
+        <h2>
+        Drag images to the canvas an create your image 
+        </h2>
+        
+        <br />
+        
+        <div>
+        
+            <img id="img1" draggable="true" ondragstart="drag(event)" src='images/alien.png'>
+            <img id="img2" draggable="true" ondragstart="drag(event)" src='images/monster.png'> 
+            <img id="img3" draggable="true" ondragstart="drag(event)" src='images/jelly.png'> 
+            <img id="img4" draggable="true" ondragstart="drag(event)" src='images/fish.png'>
+            <img id="img5" draggable="true" ondragstart="drag(event)" src='images/boy.png'> 
+            <img id="img6" draggable="true" ondragstart="drag(event)" src='images/girl.png'> 
+            
+        </div>
+        
+        <div align="center">
+        <canvas id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)" width="800" height="500" style="border: 1px solid gray"  >  </canvas>
+        
+        </div>
+		 <br /> <br />
+         <div class="footer" align="center">
+         change weather: https://css-tricks.com/     canvas> http://stackoverflow.com/
+         </div>
+</div>
+</body>
+</html>
