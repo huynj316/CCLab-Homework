@@ -1,0 +1,231 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+header {
+	background-color: #88FFC0;
+	height: 300px;
+	margin-left: -10px;
+	width: 1290px;
+	margin-top: -10px;
+}
+
+header img {
+	margin-top: 30px;
+	margin-bottom: -50px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 70px;
+	font-family: "Montserrat";
+	color: black;
+	height: 50px;
+	text-transform: uppercase;
+	letter-spacing: 35px;
+	margin-top: -23px;
+	padding-top: 100px;
+}
+
+h2 {
+	text-align: center;
+	font-family: "maven pro light";
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+footer {
+	height: 70px;
+	width: 100%;
+	background-color: white;
+}
+
+
+li{
+	list-style: none;
+	margin-bottom: 10px;
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 40px;
+}
+
+
+p {
+	font-family: roboto;
+	text-align: left;
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+#current-user{
+	float: right;
+	margin-top: 20px;
+	font-family: roboto;
+	font-size: 20px;
+	margin-bottom: 50px;
+	margin-right: 20px;
+	font-weight: bold;
+}
+
+#location p {
+	text-align: center;
+}
+
+#loc {
+	text-align: center;
+}
+
+#hours {
+	text-align: center;
+}
+
+#ourgoals h2 {
+	padding-bottom: 20px;
+}
+#ourgoals p {
+	text-align: left;
+	margin-right: 390px;
+	margin-left: 340px;
+}
+#ourgoals li {
+	margin-top: 10px;
+	font-family: roboto;
+	text-align: left;
+	font-size: 13px;
+	width: 600px;
+	margin-right: 300px;
+	margin-left: 300px;
+	list-style: initial;
+}
+
+#pic {
+	margin-top: 40px;
+	margin-left: 500px;
+
+}
+
+#description {
+	width: 600px;
+	text-align: center;
+	font-size: 13px;
+	font-family: roboto;
+	margin-left: 320px;
+	margin-right: 320px;
+	margin-bottom: 30px;
+}
+
+#feed {
+	float: left;
+	width: 40%;
+	margin-left: 110px;
+	height:560px;
+	border: 2px solid black;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+}
+
+#feed2{
+	float: right;
+	width: 40%;
+	height: 560px;
+	margin-right: 110px;
+	border: 2px solid black;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+
+}
+
+#mapwrap {
+	height: 340px;
+}
+
+
+
+#map {
+	 position:absolute; 
+	 top: 0;
+	 bottom: 0;
+	 height: 40%;
+	 width:70%;
+	 margin-top: 700px;
+	 margin-left: -120px;
+	 margin-bottom: 100px;
+
+}
+
+#description h3 {
+	text-align: left;
+}
+
+#feed2 h2 {
+	margin-bottom: 50px;
+
+}
+
+
+#feed2 li {
+	margin-top: -67px;
+
+
+}
+
+#feed2 p {
+	margin-top: -20px;
+	font-size: 20px;
+
+}
+
+#feed li:hover {
+	opacity: 0.5;
+}
+
+*{transition: all 0.3s linear;}
+
+button {
+	outline: 0 none;
+}
+
+.hidden{
+  font-size: 0;
+  font-family: roboto;
+}
+
+
+.like-toggle.basic2{
+  border: none;
+  width: 60px;
+  height: 60px;
+  font-size: 1em;
+  border-radius: 100px;
+  background: #ccc;
+  color: #000;
+  font-family: roboto;
+}
+
+.like-active.basic2{
+  background: #88FFC0;
+  font-family: roboto;
+}
+
+.like-toggle.basic2:not(.like-active):hover{
+  background: #ccc;
+  width: 100px;
+  font-family: roboto;
+}
+
+ a {
+	display: inline-block;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+a:hover {
+	opacity: 0.5;
+}
+
+
+
+
+

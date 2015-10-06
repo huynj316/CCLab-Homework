@@ -1,0 +1,203 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+header{
+	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/57/be/6c/57be6c14da6196a757770d237e43be0a.png");
+	height: 630px;
+	width: 1283px;
+	margin-left: -10px;
+
+}
+
+h1 {
+	text-align: left;
+	font-size: 100px;
+	font-family: "Montserrat";
+	color: black;
+	height: 50px;
+	text-transform: uppercase;
+	letter-spacing: 43px;
+	margin-top: -23px;
+	padding-top: 230px;
+	padding-left: 20px;
+
+
+
+}
+
+h2 {
+	text-align: center;
+	font-family: "maven pro light";
+	text-transform: uppercase;
+	font-size: 40px;
+	margin-bottom: -20px;
+	padding-bottom: 20px;
+
+}
+
+h3 {
+	text-align: center;
+	font-family: "Didot";
+	font-size: 24px;
+	font-style: italic;
+}
+
+header p {
+	font-size: 23px;
+	padding-bottom: 50px;
+	font-family: "maven pro light";
+	font-weight: bold;
+	color: black;
+	text-align: left;
+	padding-left: 33px;
+
+}
+
+p {
+	font-family: roboto;
+	text-align: left;
+	font-size: 15px;
+}
+
+nav {
+	text-align: center;
+	font-family: "maven pro light";
+	text-transform: uppercase;
+	font-size: 27px;
+	background-color: #88FFC0;
+	font-weight: bolder;
+	margin-top: -27px;
+	width: 1283px;
+	margin-left: -10px;
+	margin-bottom: 77px;
+	height: 87px;
+
+
+}
+
+
+nav li {
+	display: inline-block;
+	list-style: none;
+	text-align: center;
+	position: relative;
+	margin-right: 60px;
+	margin-left: 60px;
+	margin-top: 15px;
+	margin-bottom: 30px;
+
+}
+
+/* http://stackoverflow.com/questions/28623446/expand-border-from-center-on-hover */
+nav a:after {
+	position: absolute;
+    left: 50%;
+	content: '';
+	height: 2px;
+    background: #000;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    width: 0;
+    bottom: 0; 
+}
+nav a:hover:after {
+	width: 100%;
+    margin-left: -50%;
+}
+
+
+nav li img{
+	width: 40px;
+	height:40px;
+
+}
+
+
+
+nav a {
+		text-decoration: none;
+		color: black;
+}
+
+
+#wrapper li {
+	text-align: left;
+	list-style: none;
+	font-family: roboto;
+	font-size: 15px;
+	
+	 
+}
+
+#wrapper {
+	position: relative;
+	padding-top: 40px;
+}
+
+
+#wrapper2 {
+	position: relative;
+	margin-top: 500px;
+	margin-bottom: -20px;
+	background-color: #E8E8E8 ;
+	margin-left: -20px;
+	margin-right: -20px;
+	height:400px;
+
+
+}
+
+
+
+.designers{
+	float: left;
+	width: 30%;
+	margin-left: 150px;
+
+	
+}
+
+.nonprofits{
+	float: right;
+	width: 30%;
+	margin-right: 150px;
+	
+}
+
+#step1 {
+	height: 60px;
+}
+
+
+#step {
+	height:100px;
+	padding-bottom: 10px;
+}
+
+
+
+#wrapper2 h2 {
+	padding-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+#wrapper2 a {
+	display: inline-block;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
+
+}
+
+#wrapper2 a:hover {
+	opacity: 0.5;
+}
+
+
+
+
+
+
+
+
