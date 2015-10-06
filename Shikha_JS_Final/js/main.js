@@ -34,3 +34,13 @@ function getStory() {
 
 window.onload = init();
 
+// function play() {
+//     var audio = document.getElementById('sound');
+//     if (audio.paused) {
+//         audio.play();
+//     }else{
+//         audio.pause();
+//         audio.currentTime = 0
+//     }
+// }
+

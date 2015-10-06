@@ -5,8 +5,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="css/style.css" />
 	<link href="fonts/Dosis-ExtraLight.otf">
-	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
 
 
 </head>
@@ -17,9 +17,13 @@
 		<div class="right">
 	    <div id="social">
 	    	<ul>
-	    	<li><img src="assets/facebook-icon.svg" width="100%"></li>
-	    	<li><img src="assets/twitter-icon.svg" width="100%"></li>
+	    	<li id="play"><img src="assets/play.svg" width="100%"></li>
+	    	<li id="mute"><img src="assets/mute.svg" width="100%"></li>
+
+	    	<li id="fb"><img src="assets/facebook-icon.svg" width="100%"></li>
+	    	<li id="tw"><img src="assets/twitter-icon.svg" width="100%"></li>
 	    	</ul>
+	    	<audio autoplay id="sound" src="assets/addams_family.mp3"></audio> 
 	    </div>
 	    </div>
 
@@ -88,6 +92,11 @@
 
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/jquery.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+
 
 
 <script type="text/javascript" src="js/impress.js"></script>
@@ -97,46 +106,46 @@
 
 <div id="fb-root"></div>
 
-     <script type="text/javascript">      // Initialize the Parse object first.
-		Parse.initialize("aLwntn9AoExdBqBvyOZzqkTn5GesQZjvrCo5wnHq", "u2dDK5whwRKc0TMidyVpquWDHfbD3BdcIcMSWe7w");
-
-
-       window.fbAsyncInit = function() {
+        
+		<script>
+		Parse.initialize("Xx0jyPNgI60nPLeCV5zzwUCLFJ1RgtsIjy4YGuci", "u3tfFxk4bP0ozecBpJ5Q7knjmmI3wH2JsmA4FFZN");
+  window.fbAsyncInit = function() {
     Parse.FacebookUtils.init({
-        appId      : '1634680880147170', 
-        status     : true, 
-        cookie     : true, 
-        xfbml      : true
+      appId      : '1634680880147170',
+      status     : true,  // check Facebook Login status
+      cookie     : true,  // enable cookies to allow Parse to access the session
+      xfbml      : true,
+      version    : 'v2.4'
     });
-    Parse.FacebookUtils.logIn(null, {
-        success: function(user) {
-            if (!user.existed()) {
-                alert("User signed up and logged in through Facebook!");
-            } else {
-                alert("User logged in through Facebook!");
-            }
-        },
-        error: function(user, error) {
-            alert("User cancelled the Facebook login or did not fully authorize.");
-        }
-    });
-};
-
-
  
-       (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/all.js";
-          fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
+
+    Parse.FacebookUtils.logIn(email, public_profile, user_friends {
+  success: function(user) {
+    if (!user.existed()) {
+      alert("User signed up and logged in through Facebook!");
+    } else {
+      alert("User logged in through Facebook!");
+    }
+  },
+  error: function(user, error) {
+    alert("User cancelled the Facebook login or did not fully authorize.");
+  }
+});
+    };	
+
+
+ (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
     </script>
 
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 
@@ -151,7 +160,7 @@ FB.ui(
   picture: 'https://40.media.tumblr.com/56539399d8b065a8b24df92cd37a0134/tumblr_nvpvvzakIE1tojchso1_250.png',
   caption: 'HAPPY HALLOWEEN!',
   description: 'Check out my spooky story on The Pumpkin Tales. This Halloween, spook your friends out by writing your own horror short story.',
-  href: 'http://thepumpkintales.uphero.com/#/story'
+  href: 'http://thepumpkintales.uphero.com'
 }, function(response){});
 });
 });

@@ -56,7 +56,6 @@ header{
 	width: 30px;
 	height:30px;
 	display: inline-block;
-	margin: 0 5px;
 	vertical-align: middle;
 	position: relative;
 	opacity: 0.2;
@@ -68,6 +67,22 @@ header{
 li{
 	text-decoration: none;
 	cursor:pointer;
+}
+
+
+
+#mute img{
+  margin-left:-2.35vw; 
+  display:none;
+}
+
+#fb img{
+  margin-left: -1.7vw;
+}
+
+#tw img{
+  margin-left: -1vw;
+  position:relative;
 }
 
 
