@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Designers</title>
+	<link rel="stylesheet" type="text/css" href="css/setup.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+
+
+</head>
+
+<body>
+
+
+	<header id="header">
+		<center><a href="index.html"><img src="images/enhance.png" width="100px"></a></center>
+		<h1>Designers</h1>
+
+	</header>
+
+  <div id="current-user"></div>
+
+<center>
+  <h2>Log In</h2>
+  <form id="login">
+    <p><input id="login-name" type="text"></p>
+    <p><input id="login-password" type="password"></p>
+    <p><input id="login-submit" type="submit"></p>
+  </form>
+
+  
+  <div>
+    <button id="logout">Log Out</button>
+  </div>
+
+</center>
+	
+
+
+		<center>
+		<form id="signup">
+          <h2>Sign Up</h2>
+          <legend><span class="number">1 </span>Your Basic Info</legend>
+          <label for="name">Name:</label>
+          <p><input type="text" id="signup-name" name="user_name"></p>
+          
+          <label for="mail">Email:</label>
+          <p><input type="email" id="signup-email" name="user_email"></p>
+          
+          <label for="password">Password:</label>
+          <p><input type="password" id="signup-password" name="user_password"></p>
+
+          <label for="loc">Location (City, Country):</label>
+        	<p><input type="loc" id="signup-loc" name="user_loc"></p>
+         
+          
+        
+        
+        
+          <legend><span class="number">2 </span>Your Profile</legend>
+          <label for="bio">About Me:</label>
+          <textarea id="bio" name="user_bio"></textarea>
+          <label for="goals">My Goals:</label>
+          <textarea id="goals" name="user_goals"></textarea>
+          <label for="links">Project Links:</label>
+          <textarea id="links" name="user_links"></textarea>
+         
+    	</center>
+        
+	</div>
+
+
+
+
+	<div id="areasofinterest">
+		<h3>What categories are you interested in?</h3>
+
+
+		<center>
+
+
+		<ul>
+
+			
+
+			<li id="circle1"><p>Animals<br> </br></p><!-- <img src="images/animals.png" width="130px" --></li>
+			<li id="circle2"><p>Environment<br> </br></p><!-- <img src="images/environment.png" width="130px"> --></li>
+			<li id="circle3"><p>International <br>NGOs</br></p><!-- <img src="images/internationalngos.png" width="130px"> --></li>
+			<li id="circle4"><p>Health<br> </br></p><!-- <img src="images/health.png" width="130px"> --></li>
+			<li id="circle5"><p>Education<br> </br></p><!-- <img src="images/education.png" width="130px"> --></li>
+			<li id="circle6"><p>Arts and Culture<br> </br></p><!-- <img src="images/artsculture.png" width="130px"> --></li>
+			<li id="circle7"><p>Advocacy and <br>Human Rights</br></p><!-- <img src="images/aandhr.png" width="130px"> --></li>
+			<li id="circle8"><p>Community<br> </br></p><!-- <img src="images/community.png" width="130px"> --></li>
+			<li id="circle9"><p>Technology<br> </br></p><!-- <img src="images/tech.png" width="130px"> --></li>
+			<li id="circle10"><p>Disaster<br> </br></p><!-- <img src="images/disaster.png" width="130px"> --></li>
+			<li id="circle11"><p>Justice and <br>Legal</br></p><!-- <img src="images/jandl.png" width="130px"> --></li>
+			<li id="circle12"><p>Media and <br>Broadcasting</br></p><!-- img src="images/mandb.png" width="130px"> --></li>
+		</ul>
+
+		<h3>What are your areas of expertise?</h3>
+		<center>
+		<ul>
+			<li id="circle13"><p>Graphic Design</p><!-- <img src="images/gd.png" width="130px"> --></li>
+			<li id="circle14"><p>Web Design</p><!-- <img src="images/wd.png" width="130px"> --></li>
+			<li id="circle15"><p>Branding</p><!-- <img src="images/branding.png" width="130px"> --></li>
+      		<li id="circle17"><p>Interaction Design</p></li>
+     		<li id="circle18"><p>Industrial Design</p></li>
+      		<li id="circle19"><p>UI/UX Design</p></li>
+      		<li id="circle20"><p>Urban Design</p></li>
+      		<li id="circle21"><p>Product Design</p></li>
+		</ul>
+
+		 <center><p><input id="signup-submit" type="submit"></input><p>
+      <a href="desprofile.html">Go To Profile Page</a>
+     </center>
+
+
+
+		</center>
+
+
+	</div>
+  </form>
+
+
+	<footer><center><a href="#header">^</a></center></footer>
+
+
+
+
+
+	
+
+  <script src="js/jquery-2.1.4.min.js"></script> 
+	<script src="js/script.js"></script>
+
+    <script type="text/javascript">
+    Parse.initialize("3t6lItJqcBbUZ6tLjBfACmO3fuIr7OeyfkS3W5x4", "C1TunX9QeYKA5Q4VSD5eiZvVJQPAZ7Stg17S8RNH");
+  
+    function checkLogin() {
+      if (Parse.User.current()) {
+        // console.log("Logged in! "+Parse.User.current().get("username"));
+        $("#current-user").html("Hello, "+Parse.User.current().get("username")+"!");
+      } else {
+        $("#current-user").html("");
+      }
+    };
+
+    checkLogin();
+      function checkUserInfo() {
+      if (Parse.User.current()) {
+        $("#signup-name").html(Parse.User.current().get("username"));
+        $("#signup-loc").html(Parse.User.current().get("location"));
+        $("#bio").html(Parse.User.current().get("aboutme"));
+
+      }
+    };
+
+    checkUserInfo();
+
+  $("#logout").click(function(event){
+    Parse.User.logOut();
+    checkLogin();
+  });
+
+   $("#login").submit(function(event) {
+    event.preventDefault();
+
+    var name = $("#login-name").val();
+    var pass = $("#login-password").val();
+
+    Parse.User.logIn(name, pass, {
+      success: function(user){
+        // console.log("Log in Success!");
+        checkLogin();
+
+      }, error: function(user, error){
+        console.log("Log in Error"+error.message);
+
+      }
+    });
+   });
+
+   $("#signup").submit(function(event) {
+    event.preventDefault();
+
+    var name = $("#signup-name").val();
+    var pass = $("#signup-password").val();
+    var mail = $("#signup-email").val();
+    var loc = $("#signup-loc").val();
+    var about = $("#bio").val();
+    var goals = $("#goals").val();
+    var links = $("#links").val();
+
+    var user = new Parse.User();
+    user.set("username", name);
+    user.set("password", pass);
+    user.set("email", mail);
+    user.set("location", loc);
+    user.set("aboutme", about);
+    user.set("goals", goals);
+    user.set("links", links);
+
+    user.signUp(null, {success: function(user) {
+      checkLogin();
+
+    }, error: function(user, error){
+      console.log("signup error:"+ error.message);
+
+    }
+   });
+  });
+
+
+
+  </script>
+
+</body>
+
+</html>

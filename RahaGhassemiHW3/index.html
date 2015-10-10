@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Pacifico|Lora);
+      html, body { height: 100%; margin: 0; padding: 0; }
+      header {}
+      #map { height: 90%; width: 100%; margin-left: 0px; margin-top: 0px;}
+      p {font-family: "Avenir Next"; font-size: 15px; color: black; display: inline; text-align: center; margin-left: 200px; margin-right: 215px; text-transform: uppercase;}
+      #up a {font-size: 50px; margin-top: 20px; border: none; padding-top: 10px;}
+      #title img {width: 100%; }
+      nav {background-color: #e6e6e6; margin-bottom: 50px; margin-top: -4px; padding: 10px; margin-bottom: 0px; border: 1px solid black;}
+      li {list-style: none; display: inline;}
+      a {font-family: "Avenir Next"; text-decoration: none; text-transform: uppercase; font-size: 12px; color: black; text-align: center; margin-right: 5px; margin-left: 5px; margin-bottom: -20px; border: 1px solid black; padding: 7px;}
+      #main a:hover {background-color: black; color: #e6e6e6}
+      #social {background-color: #e3e3e3; height: 50px; margin-top: 0px;}
+      #social img {width: 32px; margin-top: -5px;}
+      #social a {border: none;}
+      #floating-panel {
+  position: relative;
+  top: 10px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 0px;
+  margin-bottom: -40px;
+  margin-top: 500px;
+}
+
+    </style>
+  </head>
+  
+  <body>
+    <header>
+    <center>
+      <nav id="social">
+        <ol>
+          <li><a href=""><img src="fb.png"></a></li>
+          <li><a href=""><img src="pin.png"></a></li>
+          <li><a href=""><img src="insta.png"></a></li>
+          <li><a href=""><img src="email.png"></a></li>
+        </ol>
+      </nav>
+      <img src="fruhstuck.png" id="title" width="1280px">
+      <nav id="main">
+        <ol>
+          <li><a href="" id="res">Make a Reservation</a></li>
+          <li><a href="">Events</a></li>
+          <li><p>German-style breakfast spot in SOHO, NYC</p></li>
+          <li><a href="#map">Location</a></li>
+          <li><a href="" id="menu">See the Menu</a></li>
+        </ol>
+      </nav>
+      
+      
+    </center>
+    </header>
+    <center><p id = "up"><a href="#social">^</a></p></center>
+
+    <div id="map"></div>
+    <script type="text/javascript">
+
+
+function initMap() {
+  // var directionsService = new google.maps.DirectionsService;
+  // var directionsDisplay = new google.maps.DirectionsRenderer;
+  var myLatLng = {lat: 40.7231, lng: -74.0008};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: myLatLng
+  });
+
+
+   var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map    
+  });
+
+}
+
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXxuoABFN6zw8tExNZAGurpy5Z_PrKtFk&callback=initMap">
+    </script>
+  </body>
+</html>

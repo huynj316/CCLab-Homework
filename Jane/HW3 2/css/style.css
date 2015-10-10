@@ -1,0 +1,263 @@
+html, body { 
+    height: 100%;
+    margin: 0; 
+    padding: 0; 
+    background-color: white;
+}
+h1{
+  background-color: coral;
+  position: absolute;
+  width: 100vw;
+  height: 18vh;
+  padding-top: 3vh;
+  padding-left: 2vw;
+  font-family: Gotham;
+  font-weight: bolder;
+  font-size: 102px;
+  color: white;
+  top: -11vh;
+  text-align: left;
+  }
+
+  h3{
+    font-family: Gotham;
+    font-weight: bold;
+  }
+
+  li a {text-decoration : none; color : coral;}
+
+
+#meal{
+  position: relative;
+  float: right;
+  top: -6vh;
+  width : 15vw; 
+  background: coral; 
+  padding-top: 10px;
+  margin : 35px auto; 
+  z-index: 1;
+}
+
+
+span {
+  padding-top:60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background : #coral; 
+  color : white;
+  font-size : 1.2em;
+  font-variant : small-caps;
+  cursor : pointer;
+  display: block;
+}
+
+span::after {
+  float: right;
+  right: 10%;
+  content: "+";
+}
+
+
+.slide {
+  clear:both;
+  width:20vw;
+  height:0px;
+  overflow: hidden;
+  /*text-align: center;*/
+  list-style: none;
+  transition: height .4s ease;
+}
+
+.slide li {
+  padding : 20px;
+  margin-right: 90px;
+}
+
+.slide li a{color: white; width:10vw;}
+
+
+#touch {position: absolute; opacity: 0; height: 0px;}    
+
+#touch:checked + .slide {
+  height: 220px;
+  padding: 10px;
+}
+#block{
+
+}
+
+#map { 
+    position: absolute;
+    width: 86%;
+    height: 80%;
+    top: 20vh;
+    left: 15vw;
+
+}
+button:hover{
+  opacity: .5;
+}
+button:clicked{
+  background-color: coral;
+}
+
+#button{
+  position: relative;
+  top: 20vh;
+  z-index: 100;
+  width: 15vw;
+  height: 13vh;
+  font-family: Gotham;
+  font-size: 20px;
+  color: white;
+  background-color: #00a79d;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+#button2{
+  position: absolute;
+  top: 33vh;
+left: 0;
+  z-index: 100;
+  width: 15vw;
+  height: 13vh;
+  font-family: Gotham;
+  font-size: 20px;
+  color: white;
+  background-color: #00a79d;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+#button3{
+  position: absolute;
+  top: 46vh;
+  left: 0;
+  z-index: 100;
+  width: 15vw;
+  height: 13vh;
+  font-family: Gotham;
+  font-size: 20px;
+  color: white;
+  background-color: #00a79d;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+#button4{
+  position: absolute;
+  top: 59vh;
+  left: 0;
+  z-index: 100;
+  width: 15vw;
+  height: 13vh;
+  font-family: Gotham;
+  font-size: 20px;
+  color: white;
+  background-color: #00a79d;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+#button5{
+  position: absolute;
+  top: 72vh;
+  left: 0;
+  z-index: 100;
+  width: 15vw;
+  height: 13.5vh;
+  font-family: Gotham;
+  font-size: 20px;
+  color: white;
+  background-color: #00a79d;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+#button6{
+  position: absolute;
+  top: 85.5vh;
+  left: 0;
+  z-index: 100;
+  width: 15vw;
+  height: 13vh;
+  font-family: Gotham;
+  font-size: 20px;
+  color: white;
+  background-color: #00a79d;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+#spacer{
+  background-color: coral;
+  width: 15vw;
+  height: 1.5vh;
+  position: absolute;
+  top: 98.5vh;
+
+}
+#chart { 
+    position: absolute;
+    width: 86%;
+    height: 80%;
+    top: 20vh;
+    left: 15vw;
+    background-color: #00a79d;
+    display: none;
+}
+
+#wish { 
+    position: absolute;
+    width: 86%;
+    height: 80%;
+    top: 20vh;
+    left: 15vw;
+    background-color: #00a79d;
+    display: none;
+
+}
+#list{
+    position: absolute;
+    width: 86%;
+    height: 80%;
+    top: 20vh;
+    left: 15vw;
+    overflow: scroll;
+    display: none;
+}
+#list h3{
+  font-family: Gotham;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  padding-left: 6vw;
+  padding-top: 1vh;
+
+}
+
+table {
+    position: absolute;
+    height: 70%;
+    top: 15vh;
+    left: 6vw;
+    width: 90%;
+    font-family: Gotham;
+    font-size: 20px;
+    color: white;
+    overflow: scroll;
+}
+#insta{
+    position: absolute;
+    width: 86%;
+    height: 80%;
+    top: 20vh;
+    left: 15vw;
+    overflow: scroll;
+    display: none;
+}
+#insta img{
+    width: 100%;
+}
