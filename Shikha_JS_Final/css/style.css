@@ -1,0 +1,430 @@
+.no-support-message { display:none; }
+.impress-not-supported .no-support-message { display:block; }
+
+*{
+	top:0;
+}
+
+body{
+	background-color: #1C1B1B;
+	height:100%;
+}
+
+header{
+	border-bottom: 1px solid #333333;
+	border-width: 100%
+    top: 0;
+    height:50px;
+    width: 100%;
+    line-height:50px;
+    position: fixed;
+}
+
+
+#Layer_1{
+	width: 30vw;
+	height: auto;
+	margin-top: 16vh;
+	margin-bottom: 0;
+}
+
+.right{
+    height:50px;
+    line-height:50px;
+    position:relative;
+    float:right;
+    width: 200px;
+}
+
+.left{
+    height:50px;
+    line-height:50px;
+    position:relative;
+    float:left;
+    width: 500px;
+    padding: 0 20px;
+}
+
+#logo-text{
+	width: 15vw;
+	height: auto;
+	margin-top: 8px;
+
+}
+
+#social li{
+	width: 30px;
+	height:30px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	opacity: 0.2;
+	margin-top: -4vh;
+}
+
+
+
+li{
+	text-decoration: none;
+	cursor:pointer;
+}
+
+
+
+#mute img{
+  margin-left:-2.35vw; 
+  display:none;
+}
+
+#fb img{
+  margin-left: -1.7vw;
+}
+
+#tw img{
+  margin-left: -1vw;
+  position:relative;
+}
+
+
+#impress{
+	height: 800px;
+	position: relative;
+	margin-top: 12vh;
+}
+
+.step { 
+	width: 768px;
+    height: 748px;
+    opacity: 0.2;
+    margin: auto;
+    position: relative;
+    font-family: 'Dosis-ExtraLight';
+    z-index: 1;
+
+}
+
+.step.active{
+	opacity:1;
+	z-index: 2;
+}
+
+
+.smallText{
+	color: #f6921d;
+	font-size: 1.8em;
+	letter-spacing:1px;
+	position: relative;
+
+}
+
+.bigText{
+	color: #fff;
+	font-size: 3em;
+	letter-spacing: 2px;
+	line-height:1.5em;
+	margin-top: 5vh;
+}
+
+.pumpkin-icon {
+	margin-top: 10vh;
+  	animation: bounce 2s infinite;
+}
+
+.pumpkin-icon1 {
+  margin-top: -12vh;
+  margin-left: 15vw;
+    animation: bounce 2s infinite;
+}
+
+.pumpkin-icon:hover{
+  opacity: 0.4;
+
+}
+
+#iconsDancing{
+  vertical-align: middle;
+}
+
+
+#hoverText{
+  font-family: Avenir;
+  color: #fff;
+  font-size: 1.2em;
+  position: relative;
+  margin-top: -7vh;
+  margin-left: 9vw;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display:none;
+}
+
+
+
+#pumpkin:hover #hoverText{
+  display: block;
+}
+
+
+@keyframes pumpkin-icon1 {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  60% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pumpkin-icon {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+
+#saveButton{
+  width: 280px;
+  height: 50px;
+  outline: none;
+  background-color: transparent;
+  text-align: center;
+  color: #6e6e6e;
+  border: 1px solid #6e6e6e;
+  font-family: Dosis;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 5vh;
+  letter-spacing: 0.3vw;
+  text-decoration: none;
+}
+
+
+
+#saveButton:hover{
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-family: Dosis;
+  font-size: 1.2em;
+  color: #fff;
+
+}
+
+
+#saveButton:active{
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-family: Dosis;
+  font-size: 1.2em;
+  color: #fff;
+
+}
+
+
+#witchIcon {
+	margin-top: 6vh;
+  	animation: bounce 2s infinite;
+    position:relative;
+
+}
+
+#witchIcon1 {
+  margin-top: 10vh;
+    animation: bounce 2s infinite;
+    position:relative;
+
+}
+
+
+
+
+@keyframes witchIcon {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+
+.deathIcon {
+	margin-top: -12vh;
+  position:relative;
+  margin-left: 30vw;
+  	animation: bounce 2s infinite;
+
+
+}
+
+@keyframes deathIcon {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+
+
+.Enter {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+textarea{
+	width: 700px;
+	height: 200px;
+	background: transparent;
+	border: none;
+	font-family:'Dosis-ExtraLight';
+	font-size: 3em;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height:1.5em;
+	outline: none;
+	margin-top: 1vh;
+}
+
+/*#button{
+  width: 200px;
+  height:50px;
+  background: none;
+  border: solid 2px #6e6e6e;
+  outline: none;
+  font-family: 'Dosis-ExtraLight';
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: #6e6e6e;
+  margin-top: 2vh;
+
+}
+
+#button:hover{
+  border: solid 2px #fff;
+  color: white;
+  cursor: pointer;
+}
+
+#button:active{
+  border: solid 2px #fff; 
+  color: #fff;
+  
+}
+
+#button:focus{
+  border: solid 2px #fff;
+  color: #fff;
+}*/
+
+
+#generate{
+  color: #fff;
+  font-size: 3em;
+  letter-spacing: 2px;
+  line-height:1.5em;
+  margin-top: 10vh;
+}
+
+#share_button{
+  width: 280px;
+  height: 50px;
+  outline: none;
+  background-color: transparent;
+  text-align: center;
+  color: #6e6e6e;
+  border: 1px solid #6e6e6e;
+  font-family: Dosis;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 5vh;
+  letter-spacing: 0.3vw;
+}
+
+#share_button:hover{
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-family: Dosis;
+  font-size: 1.2em;
+  color: #fff;
+
+}
+
+#share_button:active{
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-family: Dosis;
+  font-size: 1.2em;
+  color: #fff;
+
+}
+
+#share_button:focus{
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-family: Dosis;
+  font-size: 1.2em;
+  color: #fff;
+
+}
+
+
+
+
+

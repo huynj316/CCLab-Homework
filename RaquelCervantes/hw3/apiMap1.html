@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+<style type="text/css">
+
+	#map {
+		width: 500px;
+		height: 400px;
+		
+		
+
+	}
+	body{
+		background: #EAE9D0;
+		color: #8DC63F;
+		font-family: Arial, Helvetica;
+		text-align: center;
+	}
+
+</style>
+<script src="https://maps.googleapis.com/maps/api/js">
+</script>
+<script>
+
+
+  function initialize() {
+  var mapCanvas = document.getElementById('map');
+  var mapOptions = {
+  	center : new google.maps.LatLng(40.000,-77.000), zoom: 15,
+  	mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map = new google.maps.Map(mapCanvas, mapOptions)
+  }	
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+</script>
+
+</head>
+
+<body  background="#F7C1D0">
+ <h1 >
+  Google maps
+ </h1>
+
+ <h2>
+ You could find us in this location
+		
+<div align="center" position:"absolute" indexfix:"0">
+ <div id ="map" align="center"> 
+
+ </div>
+</div>
+
+</body>
+</html>
