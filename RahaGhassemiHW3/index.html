@@ -5,7 +5,7 @@
     @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Pacifico|Lora);
       html, body { height: 100%; margin: 0; padding: 0; }
       header {}
-      #map { height: 90%; width: 100%; margin-left: 0px; margin-top: 0px;}
+      #map{ height: 90%; width: 100%; margin-left: 0px; margin-top: 0px;}
       p {font-family: "Avenir Next"; font-size: 15px; color: black; display: inline; text-align: center; margin-left: 200px; margin-right: 215px; text-transform: uppercase;}
       #up a {font-size: 50px; margin-top: 20px; border: none; padding-top: 10px;}
       #title img {width: 100%; }
@@ -60,19 +60,21 @@
     </center>
     </header>
     <center><p id = "up"><a href="#social">^</a></p></center>
-
+    <center><input type="button" value="Toggle Street View" onclick="toggleStreetView();"></input></center>
     <div id="map"></div>
     <script type="text/javascript">
-
+var panorama;
 
 function initMap() {
   // var directionsService = new google.maps.DirectionsService;
   // var directionsDisplay = new google.maps.DirectionsRenderer;
   var myLatLng = {lat: 40.7231, lng: -74.0008};
+  
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: myLatLng
+    zoom: 18,
+    center: myLatLng, 
+    streetViewControl: false
   });
 
 
@@ -80,6 +82,36 @@ function initMap() {
     position: myLatLng,
     map: map    
   });
+
+
+
+  //  var panorama = new google.maps.StreetViewPanorama(
+  //     document.getElementById('pano'), {
+  //       position: myLatLng,
+  //       pov: {
+  //         heading: 34,
+  //         pitch: 10
+  //       }
+  //     });
+
+  // map.setStreetView(panorama);
+  
+  panorama = map.getStreetView();
+  panorama.setPosition(myLatLng);
+  panorama.setPov(({
+    heading: 265,
+    pitch: 0
+  }));
+
+  function toggleStreetView() {
+  var toggle = panorama.getVisible();
+  if (toggle == false) {
+    panorama.setVisible(true);
+  } else {
+    panorama.setVisible(false);
+  }
+
+};
 
 }
 
