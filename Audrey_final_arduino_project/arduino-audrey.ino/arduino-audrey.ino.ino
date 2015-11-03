@@ -1,23 +1,31 @@
 //Audrey Fox CC Lab Sensor Homework Fall 2015
-//This takes the ultrasonic rangefinder from Maxbotix and uses it to drive a DC motor. 
+//This takes the ultrasonic rangefinder from Maxbotix and uses it to drive a Stepper motor. 
 //Code to find the median point and filter out unstable data points is from Bill Gentles. Such Math! Much grateful!
 
+#include <Servo.h> 
+Servo myservo1;
+Servo myservo2;
+
+
+int mVal; //store mapped value for servo
+
 int anPin = A0;
-int mPin = 5;
+
 int sensor = 0;//storing the incoming value
 
 int arraysize = 5; //Sample size. Needs to be an odd number
 int rangevalue[] = {0, 0, 0, 0, 0}; //0s are place holders for ease of reading code
 
+
 void setup() {
   Serial.begin(9600);
   printArray(rangevalue, arraysize);
-  pinMode(mPin, OUTPUT);  
+  myservo1.attach(9);
+  myservo2.attach(11);
   delay(500);//want to get the serial up and running before beginning the data
 }
 
 void loop() {
-   digitalWrite(mPin, LOW);
    pinMode(anPin, INPUT);
 
    for(int i = 0; i < arraysize; i++)
@@ -38,15 +46,21 @@ void loop() {
     Serial.println();  
     Serial.println();  
 
-    if(midpoint> 30){
-      digitalWrite(mPin, LOW);
-      delay(30);
+    if (rangevalue[midpoint]<=200){
+     mVal = map(rangevalue[midpoint], 200, 12, 50, 130);    //mapping midpoint sensor val to servo    
+     myservo1.write(mVal); 
+     myservo2.write(mVal);        
+     delay(15);
+     Serial.println("moving servo to: "); 
+     Serial.print(mVal);
+     Serial.println("degrees");
     }else{
-      digitalWrite(mPin, HIGH);
-      delay(30);
-    }
+      Serial.println("Not close enough to register");
+      myservo1.write(50); 
+      myservo2.write(50); 
+      }
  
- delay(3000);
+ delay(1000);
 }
 
 // sort function
@@ -78,3 +92,5 @@ void printArray(int *a, int n)
  Serial.println();
 }
 
+
+                         

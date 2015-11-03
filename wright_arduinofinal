@@ -1,0 +1,61 @@
+#include <Servo.h>
+Servo myservo;  // create servo object to control a servo
+
+#define ServoM    12        //Connected to the servo motor.
+#define In        8         //Pin connected to the IN button.
+#define BarLow    180       //Low position of the barrier.
+#define BarUp     -90        //Up position of the barrier.
+#define trigPin 7            //TRING PIN 7
+#define echoPin 6            //ECHO PIN 6
+
+
+//================================================================
+
+void setup(){
+  myservo.attach(ServoM);          // attaches the servo.
+Serial.begin (9600);
+ 
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(In, INPUT);             // set "IN" button pin to input
+  digitalWrite(In, HIGH);         // Connect Pull-Up resistor.
+  
+  myservo.write(BarLow);          //Barrier in the low position
+//  delay(15);
+}
+
+
+
+//================================================================
+void loop(){
+  
+ 
+
+  long duration, distance;
+  digitalWrite(trigPin, LOW); 
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  distance = (duration/2) / 29.1;
+ 
+//================================================================
+ 
+if(digitalRead(In)==0)
+{
+    myservo.write(BarLow);
+  
+
+    }
+ 
+ 
+  if (distance <6) 
+{ 
+    myservo.write(BarUp);}
+
+}
+
+
+
+//================================================================
