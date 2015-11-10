@@ -1,0 +1,138 @@
+//
+//  Ball.cpp
+//  inClassSketch
+//
+//  Created by Lorraine Nazaire on 11/3/15.
+//
+//
+
+#include "Ball.h"
+
+
+
+Ball::Ball(){
+    
+    
+}
+
+
+//--------------------------------------------------------------
+
+
+
+void Ball::setup(){
+    nPts = 0;
+    
+    gui.setup();
+    gui.add(endTime.set("end time", 1000.0, 0.0, 6000.0));
+    
+    timerEnd=false;
+    startTime = ofGetElapsedTimeMillis();
+    
+    
+ofSetWindowShape(500,500);
+    
+    
+    
+    
+    
+    
+    
+    xPos = 250;
+    
+    yPos = 250;
+    
+    xVel = 5;
+    
+    yVel = 5;
+    
+ 
+}
+
+
+//--------------------------------------------------------------
+
+void Ball::update(){
+    
+    
+    
+    if (xPos >= ofGetWidth()){
+        
+        xVel = xVel + ofRandom(-5);
+        
+    }
+    
+    
+    
+    if(xPos < -1){
+        
+        xVel = xVel + ofRandom(5);
+        
+    }
+    
+    if (yPos >= ofGetHeight()){
+        
+        yVel = yVel + ofRandom(-5);
+        
+    }
+    
+    
+    
+    if(yPos < -1){
+        
+        yVel = yVel + ofRandom(5);
+        
+    }
+    
+    
+}
+
+
+//--------------------------------------------------------------
+
+void Ball::draw(){
+    
+    ofSetColor(255, 0, 0 );
+    if (nPts > 1) {
+        for(int i = 0; i < nPts - 1; i++) {
+            ofLine(pts[i].x, pts[i].y, pts[i+1].x, pts[i +1].y);
+        }
+        
+    }
+    
+    gui.draw();
+    float barWidth = 600;
+    float timer = ofGetElapsedTimeMillis() - startTime;
+    
+    if (timer >= endTime) {
+        timerEnd = true;
+    }
+    
+    float timerBar = ofMap (timer, 0.0, endTime, 0.0, 1.0, true);
+    ofSetColor(255);
+    ofRect(ofGetWidth()/2-300, ofGetHeight()/2, barWidth*timerBar, 30);
+    
+    if (timer >= 3000) {
+        ofSetColor(255, 0, 0);
+        ofCircle(300, 600, 100);
+    }
+    
+    
+    ofCircle(xPos, yPos, 10);
+    
+    
+    
+    xPos = xPos + xVel;
+    
+    yPos = yPos + yVel;
+    
+    
+}
+//-----------------------------------------------------------------
+
+void Ball :: keyPressed(int key){
+    if (key==' '){
+        timerEnd =false;
+        startTime = ofGetElapsedTimeMillis();
+    }
+}
