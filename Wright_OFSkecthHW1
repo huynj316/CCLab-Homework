@@ -1,0 +1,51 @@
+//
+//  Ball.h
+//  inClassSketch
+//
+//  Created by Lorraine Nazaire on 11/3/15.
+//
+//
+
+#pragma once
+#define MAX_PTS 3000
+
+//#ifndef Ball_h
+//#define Ball_h
+#include "ofMain.h"
+#include "ofxGui.h"
+
+
+class Ball {
+public:
+    Ball();
+    
+    void setup();
+    void update();
+    void draw();
+    
+    void keyPressed (int key);
+    void mouseMoved(int x, int y );
+    void mouseDragged(int x, int y, int button);
+    void mousePressed(int x, int y, int button);
+    void mouseReleased(int x, int y, int button);
+    void windowResized(int w, int h);
+    int xPos;
+    
+    int yPos;
+    
+    int xVel;
+    
+    int yVel;
+    
+    float startTime;
+    bool timerEnd;
+    
+    ofxPanel gui;
+    ofParameter<float> endTime;
+    
+    ofPoint pts[MAX_PTS];
+    int nPts;
+    
+    
+};
+
