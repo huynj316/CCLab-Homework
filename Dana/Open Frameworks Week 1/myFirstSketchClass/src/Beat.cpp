@@ -29,7 +29,7 @@ void Beat::setup() {
     yPos = ofRandom(200);
     angle1 = ofRandom(3);
     yVel = 7;
-    volume = 0.4f;
+    volume = 0.6f;
     tempo = 1.0f;
     
     //-----------------load synth sounds
@@ -54,18 +54,23 @@ void Beat::draw(){
         beat.play();
     }
     
-    cam3.begin();
     
+    cam3.begin();
+    ofPushMatrix(); //of pushmatrix, popmatrix and translate center in cameras view...
+    ofTranslate(-ofGetWidth()/2, -ofGetHeight()/2);
     ofSetColor(140, 220, 10);
     ofFill();
     ofRect(xPos, yPos, width, height);
     ofSetColor(260, 50, 255);
     ofFill();
     ofRect(yPos, xPos, width, height);
+    ofPopMatrix();
     cam3.end();
 }
 
 void Beat::update(){
+    
+    
     xPos = xPos + xVel;
     yPos = yPos + yVel;
     if (xPos < 0 || xPos > ofGetWidth()) {

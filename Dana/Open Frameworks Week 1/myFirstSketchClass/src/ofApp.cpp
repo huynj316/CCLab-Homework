@@ -6,6 +6,9 @@
 
 
 void ofApp::setup(){
+    ofColor centerColor = ofColor(85, 78, 68);
+    ofColor edgeColor = (0,0,0);
+    ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR); //creates gradient using colors set above
     ball.setup();
     square.setup();
     ofSetFrameRate(60);

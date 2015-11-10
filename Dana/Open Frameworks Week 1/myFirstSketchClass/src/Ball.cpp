@@ -42,6 +42,8 @@ void Ball::setup() {
 
 void Ball::draw(){
     cam2.begin();
+    ofPushMatrix(); //of pushmatrix, popmatrix and translate center in cameras view...
+    ofTranslate(-ofGetWidth()/2, -ofGetHeight()/2);
     ofSetColor(255, 0, 124);
     ofFill();
     ofCircle(xPos1, yPos1, radius);
@@ -51,6 +53,7 @@ void Ball::draw(){
     ofSetColor(200, 120, 214);
     ofFill();
     ofCircle(yPos1*ofRandom(2), xPos1*ofRandom(2), radius+10);
+    ofPopMatrix();
     cam2.end();
 }
 
@@ -59,20 +62,19 @@ void Ball::update(){
     yPos1 = yPos1 + yVel1;
     if (xPos1 < 0 || xPos1 > ofGetWidth()) {
         xVel1 = -xVel1+angle;
-        radius = radius - .05;
+        radius = radius + 2;
         synth.play();
     }
     
     if (yPos1 < 0 || yPos1 > ofGetHeight()) {
         yVel1 = -yVel1-angle;
-         radius = radius - .05;
+         radius = radius - 2;
         synth.play();
     }
     
     if (xPos1 == yPos1 || yPos1 == xPos1) {
         xVel1 = -xVel1;
         yVel1 = -yVel1;
-        radius = radius + .05;
         boing.play();
     
     }
