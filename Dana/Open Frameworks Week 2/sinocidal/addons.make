@@ -1,0 +1,5 @@
+ofxColorGradient-master
+ofxExplosion-master
+ofxGui
+ofxSpriteRenderer-master
+ofxTimeMeasurements-master

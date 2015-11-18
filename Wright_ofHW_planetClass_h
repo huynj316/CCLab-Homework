@@ -1,0 +1,32 @@
+//
+//  planetClass.h
+//  orbit
+//
+//  Created by Lorraine Nazaire on 11/17/15.
+//
+//
+
+#ifndef planetClass_hpp
+#define planetClass_hpp
+
+#include "ofMain.h"
+
+class PlanetClass{
+public:
+    void setup();
+    void update();
+    void draw();
+    
+    ofParameterGroup planetGroup;
+    ofParameter<float> rotateSpeed;
+    ofParameter <float> posX;
+    ofParameter <float> posY;
+    ofParameter <int> red;
+     ofParameter <int> green;
+     ofParameter <int> blue;
+    float rotation = 0.0;
+
+};
+
+
+#endif /* planetClass_hpp */
