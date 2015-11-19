@@ -13,11 +13,9 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    ofBackground(30);// draw grey background
-    ofSetColor(255);// set color drawing color to white
-    ofTranslate(ofGetWidth()/2,ofGetHeight()/2); // move initital drawing postion to the center of the screen
-    int circle_resolution=1600; // amount of points circle is made of, more points - better quality, but could decrease perfomance
-    int radius=200;
+    ofBackground(30);
+    ofSetColor(255);
+    ofTranslate(ofGetWidth()/2,ofGetHeight()/2);     int circle_resolution=1600;     int radius=200;
     int smoothing_amount=30;
     
     ofPolyline circle_sin;
@@ -27,12 +25,12 @@ void ofApp::draw(){
     
     int wave_height=radius*0.1;
     int anim_shape=16;
-    float sine_pct=0.5; // setting in percantage how big is the part
+    float sine_pct=0.5;
     
     float speed_increment=ofGetElapsedTimef();
     
     int line_w=7;
-    int radius_cos=radius+line_w-1; // let's make it little less then line width, so circles will overlap each other
+    int radius_cos=radius+line_w-1;
     int radius_un_cos=radius+(line_w-1)*2;
     for(int i=0; i<circle_resolution; i++)
     {
@@ -43,7 +41,7 @@ void ofApp::draw(){
         float x=cos(angle+speed_increment)*radius;
         float y=sin(angle+speed_increment)*radius;
         
-        // drawing sine wave only on a part of the circle
+        
         if(i<sine_pct*circle_resolution)
         {
             x=cos(angle+speed_increment)*(radius+raidus_addon);
@@ -65,7 +63,7 @@ void ofApp::draw(){
         circle_cos.addVertex(ofPoint(x,y));
         
         
-        //increment a wave angle to flip the wave
+        
         raidus_addon=wave_height*cos((angle+TWO_PI/3+speed_increment)*anim_shape);
         x=cos(angle+speed_increment)*(radius_un_cos);
         y=sin(angle+speed_increment)*(radius_un_cos);
@@ -85,8 +83,7 @@ void ofApp::draw(){
     
     ofColor clr=ofColor::fromHex(0x379392);
     ofSetColor(clr);
-    circle_sin.close(); // to connect first and last point of our shape we need to use ÔcloseÕ function
-    circle_sin= circle_sin.getSmoothed(smoothing_amount);
+    circle_sin.close();     circle_sin= circle_sin.getSmoothed(smoothing_amount);
     circle_sin.draw();
     
     clr=ofColor::fromHex(0x2E4952);
