@@ -12,4 +12,6 @@ I have also used Serial and Arduino to bring about the interaction between human
 
 A proximity on the sensor reads the distance between the human and the screen. As the human gets closer, the birds start to disappear. In order to get the birds back, one can drag the mouse on the screen. 
 
+![ScreenShot](http://2.bp.blogspot.com/-EBxJWG31r20/UJ9LQgmFycI/AAAAAAAAASg/SSWcoQUi9iY/s1600/HC_SR04+sketch2.jpg)
+
 Here is a link to the video : https://youtu.be/WSXAyKp8S_U
