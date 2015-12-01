@@ -1,5 +1,7 @@
 #Shikha Singh OF final
 
+![ScreenShot](https://shhikhasingh.files.wordpress.com/2015/11/bird.png?w=730)
+
 Birds  are the most omnipresent, most recognizable representatives of the other species that share the fate of the planet with us. However, with the advent of human activities, in terms of climate change, habitat destruction, the birds species are being threatened leading to their extinction. 
 
 I want to create an installation using openFrameworks to show how human activities impact the existence of birds.
