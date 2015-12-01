@@ -23,6 +23,7 @@ High Volumn
 ![ScreenShot](https://raw.githubusercontent.com/huynj316/CCLab-Homework/master/YishiXie/project3soundOscilation/docu/high.png) 
 
 view video demo:
-https://github.com/huynj316/CCLab-Homework/blob/master/YishiXie/project3soundOscilation/docu/oscillation.mov
+[sound oscillation openframeworks](https://youtu.be/4y3XzQgeRcg)
+
 
 **Enjoy the oscillation, cheers~**
