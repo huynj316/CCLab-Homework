@@ -30,8 +30,9 @@ As I mentioned above, the two can be connected through Spacebrew.
 Credit:
 
 [Snax_and_Macs Tutorial on Control openFrameworks w/ Phone + Spacebrew ](http://www.instructables.com/id/Control-openFrameworks-with-Phone/)
+
 [Generating Meshes Tutorial ](http://openframeworks.cc/tutorials/graphics/generativemesh.html)
 
-[Link Name](https://vimeo.com/147422841)
+[Demo](https://vimeo.com/147422841)
 
 
