@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://mrdoob.github.io/three.js/examples/webgl_panorama_equirectangular.html -->
+<html lang="en" style="visibility: visible;">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mocking Bird</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>		
+		<link rel="stylesheet" href="css/style.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- your server info -->
+		<script src="//192.168.1.100:8000/socket.io/socket.io.js" type="text/javascript"></script>
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/three.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/pure-drawer.css"/>
+        <script src="libraries/p5.js" type="text/javascript"></script><!-- link to p5.js basic script-->
+    	<script src="libraries/p5.dom.js" type="text/javascript"></script><!-- link to p5.js DOM script-->
+    	<script src="libraries/p5.sound.js" type="text/javascript"></script>
+    	<script src="js/sketch.js" type="text/javascript"></script>
+		<script >
+
+			var socket;
+			var dist;
+			var url='192.168.1.100';
+			var eport=8000;
+
+			
+				//initializing socket
+				socket = io.connect(url+':'+eport);
+
+				// socket.on('message', function (data) { //listen for toScreen fron 
+  		// 		console.log(data);
+    // 			document.getElementById("hi").innerHTML = data;
+
+    // 			});
+
+				socket.on('dustInfo', function (data) {
+					console.log(data.dust);
+			
+					// document.getElementById("dust1").innerHTML = data.dust;
+
+					if(data.dust > 700){
+					$("#smog_alert img").show();
+					$("#dust1").hide();
+					}else if(data.dust > 0 && data.dust < 700) {
+					$("#smog_alert img").hide();
+					$("#dust1").show();
+					document.getElementById("dust1").innerHTML = "SAFE TO WALK AROUND<br>WITHOUT A MASK";
+
+					}
+				});
+
+				// socket.on('tempInfo', function (data) {
+				// 	console.log(data.temp);
+			
+				// 	document.getElementById("temp1").innerHTML = data.temp;
+				// });
+
+				socket.on('distSent', function (data) {
+					console.log(data);
+					// dist = data;
+					document.getElementById("dist").innerHTML = data.distance;
+
+					if(data.distance < 3){
+						fromParse();
+						document.getElementById("human").innerHTML = "HUMAN DETECTED";
+						// console.log(fromParse());
+						console.log("found");
+	
+
+					} else if(data.distance > 4){
+						noinput();
+						document.getElementById("human").innerHTML = "NO HUMAN AROUND";
+						console.log("nothing");
+
+					}
+
+				});
+
+				function fromParse(){
+					console.log("Get data from Parse");
+					socket.emit('getFromParse', { });
+				}
+
+				function noinput(){
+					document.getElementById("pName").innerHTML ="invalid";
+					document.getElementById("pAge").innerHTML ="invalid";
+					document.getElementById("pRelation").innerHTML ="invalid";
+				}
+				
+
+				socket.on('toScreen', function (data) {
+					var num=Object.keys(data.ParseData.results).length;
+					if (num==1){num=0;}
+					var pName = data.ParseData.results[parseInt(num)-1].Name;
+					var pAge = data.ParseData.results[parseInt(num)-1].Age;
+					var pRelation = data.ParseData.results[parseInt(num)-1].Relation;
+
+					console.log(num);
+					document.getElementById("pName").innerHTML = pName;
+					document.getElementById("pAge").innerHTML = pAge;
+					document.getElementById("pRelation").innerHTML = pRelation;
+				
+				});
+
+				
+
+	          	
+
+		</script>
+
+		<script type="text/javascript">
+			tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+			tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+			function GetClock(){
+			var d=new Date();
+			var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+			if(nyear<1000) nyear+=1900;
+			var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+			if(nhour==0){ap=" AM";nhour=12;}
+			else if(nhour<12){ap=" AM";}
+			else if(nhour==12){ap=" PM";}
+			else if(nhour>12){ap=" PM";nhour-=12;}
+
+			if(nmin<=9) nmin="0"+nmin;
+			if(nsec<=9) nsec="0"+nsec;
+
+			document.getElementById('clockbox').innerHTML=""+nhour+":"+nmin+":"+nsec+ap+"";
+			document.getElementById('datebox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+"";
+
+			}
+
+			window.onload=function(){
+			GetClock();
+			setInterval(GetClock,1000);
+			}
+
+			// $('#voicemsg').click(function(){
+			// 	$("#hi").show();
+			// });
+
+		</script>
+
+		<script type="text/javascript">
+		$(document).ready(
+    		function(){
+        		$("#voicemsg").click(function () {
+            	$("#hi").toggle();
+        });
+
+    	});
+
+  //   	function setup() {
+  // 		var canvas = createCanvas(windowWidth, 600);
+  		
+		// }
+		</script>
+
+	
+	</head>
+	<body>
+		<!-- <video autoplay id="bgvid" loop>
+  
+					<source src="assets/bg_video.mp4" type="video/mp4">
+					</video>
+					<img src="assets/bg_black.png" width="100%" style="z-index: -1; position: absolute"> -->
+
+		<div class="pure-container" data-effect="pure-effect-scaleRotate">
+            <input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"/>
+            
+            <label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right"><span class="pure-toggle-icon"><img src="assets/detect.png" width="90%" ></span></label> 
+
+            
+
+            <nav class="pure-drawer" data-position="right">
+
+                <div id="proximity"><div id="human">HUMAN DETECTED</div>
+                <div id="dist">0</div>
+				<div id="measure">mts away</div>
+
+				<div id="HumanInfo">
+					<div id="person"><img src="assets/person.png"></div>
+					<div id="details">
+						<div id="Name">name</div>
+						<div id="Age">age</div>
+						<div id="Relation">relation</div>
+					</div>
+					<div id="fromParse" style="font-size: 0.3em; color: #00405f">GET DATA</div>
+					<div id="output">
+					<div id="pName"></div>
+					<div id="pAge"></div>
+					<div id="pRelation"></div>
+	
+					</div>
+				</div>
+
+				</div>
+            </nav>
+
+
+
+              
+            
+            <div class="pure-pusher-container">
+                <div class="pure-pusher">
+                	
+
+                	<center><div id="myContainer" style="z-index: 2"></div></center>
+
+
+<!--                 	<div id="voicemsg"><img src="assets/voice_msg.png" width="88%" style="margin-top: 1.5vh; margin-left: 0.3vw"></div>
+ -->				<div id="temperature"><img src="assets/temp.png"></div>
+					<div id="temp1">40</div>	
+					<div id="icon_text">C</div>
+
+					<div id="time_date"><img src="assets/time_date.png"></div>
+					<div id="clockbox"></div>
+					<div id="datebox"></div>
+					<div id="sensor">
+					<center>
+<!-- 					<div id="text">Air Quality
+ -->				<div id="dust1"></div>	
+					<div id="smog_alert"><img src="assets/alert.png" style="display:none"></div>	
+<!-- 					<div id="hi" style="margin-top: 20vh; margin-left: 3vw; color:white; position: absolute; display:none"><h1>whats up</h1></div>
+ -->
+					<!-- </div> -->					
+					</center>
+					</div>
+                    
+                	</div>
+            <label class="pure-overlay" for="pure-toggle-right" data-overlay="right"></label>
+        	</div>
+
+
+		
+
+		
+
+
+<!-- 
+		<div id="fromParse" onclick="fromParse()" style="width: 100px; height:20px; background-color; red">GET DATA</div> -->
+	
+		
+		<!-- <div id="cities">
+			<center><div id="airData"></div></center>
+		
+		
+		<div id="left">
+			<p onclick="fromNParse()" id="city">New York City</p>
+		</div>
+		<div id="right">
+			<p onclick="fromSParse()" id="city">Seattle</p>
+			<! </form> -->
+		<!-- </div>
+		</div> --> 
+
+		
+		
+
+
+
+
+
+
+
+		
+	</body>
+</html>

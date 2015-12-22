@@ -1,0 +1,401 @@
+body{
+	background-color: #021E2D;
+	margin:0;
+	top:0;
+
+}
+
+/*#intro{
+	width: 100vw;
+	height: 100vh;
+	margin-top:0;
+	padding-top:0;
+	background-image: url("bg.png");
+
+}*/
+
+
+p{
+	font-size: 1em;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	color: white;
+	letter-spacing: 1px;
+	line-height: 3vh;
+	position: relative;
+
+}
+
+a{
+	padding-top: -100vh;
+	position: relative;
+}
+
+
+#button{
+		text-decoration: none;
+		font-size: 1.2em;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 300;
+		color: white;
+		border: 1px solid white;
+		padding: 10px;
+		padding-left: 30px;
+		padding-right: 30px;
+		letter-spacing: 3px;
+		cursor: pointer;
+  	transition:.5s;
+}
+
+#scene{
+	z-index: -1;
+
+}
+
+.layer1{
+	float: right;
+}
+
+
+
+/*#logo{
+	width: 10vw;
+	margin-left: -35vw;
+}*/
+
+
+
+
+#info{
+	margin-bottom: 10vh;
+	/*z-index: 5;*/
+}
+
+
+
+
+#sensor{
+	width: 100vw;
+	height: 100vh;
+	margin-top:0;
+	padding-top:0;
+/*	background-color:red;*/
+	position: absolute;
+}
+
+
+
+#cities{
+	width: 100vw;
+	height: 100vh;
+	/*margin-top:0;*/
+	padding-top:0;
+	margin-top: 100vh;
+	position: absolute;
+}
+
+#left{
+	width: 50vw;
+	height: 7vh;
+	border-top: 1px solid #7a7a7a;
+	border-right: 1px solid #7a7a7a;
+	float: left;
+	position: relative;
+}
+
+#right{
+	width: 50vw;
+	height: 7vh;
+	border-top: 1px solid #7a7a7a;
+	position: relative;
+	float: right;
+	margin-top: -7.1vh;
+}
+
+#city  {
+		font-size: 1.2em;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 300;
+		color: #7a7a7a;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		margin-left: 20vw;
+		cursor: pointer;
+		position: relative;
+		margin-top: 2vh;
+
+}
+
+#city:hover{
+	opacity: .5;
+}
+
+#city:active{
+	color: #fff;
+}
+
+#city:focus{
+	color: #fff;
+}
+
+
+
+#airData{
+	font-size: 4em;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+
+}
+
+
+
+
+#circle{
+	width: 200px;
+	height: 200px;
+	border-radius: 500px; 
+	border: 1px solid #7a7a7a;
+	margin-top: 18vh;
+	cursor : pointer;
+	z-index: -1;
+
+}
+
+#circle:hover{
+	transform: scale(1.1);
+	border: 1px solid #fff;
+
+}
+
+
+
+#circle1{
+	width: 400px;
+	height: 400px;
+	border-radius: 500px; 
+	border: 1px solid #7a7a7a;
+	margin-top: -38vh;
+	z-index: -1;
+	cursor: pointer;
+
+}
+
+
+
+#text{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	font-size: 1.5em;
+	color: white;
+	margin-top: 5vh;
+	position: relative;	
+}
+
+#airQ{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 2.5em;
+	margin-top: 1vh;
+
+}
+
+
+
+
+
+#instruction{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	font-size: 1em;
+	color: #7a7a7a;
+	margin-top: 10vh;
+	line-height: 4vh;
+	letter-spacing: 2px;
+
+}
+
+/*#dust1{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 2.5em;
+	margin-top: 1vh;
+
+}*/
+
+#temp1{
+	font-family: 'Dosis' ;
+	font-weight: 300;
+	font-size: 3em;
+	margin-top: 55vh;
+	letter-spacing: 0.5vw;
+	margin-left: 13vw;
+	float: left;
+	color: white;
+	position: absolute;
+
+}
+
+
+#icon_text{
+	font-family: 'Dosis' ;
+	font-weight: 300;
+	font-size: 3em;
+	margin-top: 55vh;
+	letter-spacing: 0.5vw;
+	margin-left: 22vw;
+	float: left;
+	color: white;
+	position: relative;
+
+}
+
+#clockbox{
+	font-family: 'Dosis' ;
+	font-weight: 300;
+	font-size: 1.5em;
+	margin-top: 74vh;
+	margin-left: 13vw;
+	letter-spacing: 0.5vw;
+	float: left;
+	color: white;
+	position: absolute;
+
+}
+
+#datebox{
+	font-family: 'Dosis' ;
+	font-weight: 300;
+	font-size: 1.5em;
+	margin-top: 82vh;
+	letter-spacing: 0.5vw;
+	margin-left: -11.3vw;
+	float: left;
+	color: white;
+	position: relative;
+
+
+}
+
+#time_date{
+	width: 6vw;
+	height: auto;
+	position: absolute;
+	margin-top: 73vh;
+	margin-left: 4vw;
+}
+
+#temperature{
+	width: 6vw;
+	height: auto;
+	position: absolute;
+	margin-top: 55vh;
+	margin-left: 4vw;
+}
+
+#person img{
+	width: 22vw;
+	height: auto;
+	margin-top: 3vh;
+	margin-left: 3vw;
+}
+
+#proximity{
+	font-family: 'Dosis' ;
+	font-weight: 300;
+	margin-left: 3vw;
+
+}
+
+#human{
+	font-size: 2em;
+	color: #FF4040;
+	font-weight: 500;
+	letter-spacing: 2px;
+	margin-top: 7vh;
+
+}
+
+#dist{
+	font-family: 'Dosis', sans-serif;
+	font-size: 5em;
+	color: white;	
+
+}
+
+#measure{
+	font-family: 'Dosis', sans-serif;
+	font-weight: 100;
+	letter-spacing: 2px;
+	font-size: 1.5em;
+	color: white;
+	
+}
+
+#details{
+	color: #FF4040;
+	font-weight: 400;
+	font-size: 2em;
+	letter-spacing: 2px;
+	line-height: 6vh;
+	margin-top: 1vh;
+}
+
+
+#output{
+	color: white;
+	font-weight: 400;
+	font-size: 2em;
+	float: right;
+	margin-right: 12vw;
+	margin-top: -19vh;
+	line-height: 6vh;
+
+
+}
+
+.particles{
+	margin-top: 6vh;
+	visibility: visible;
+
+}
+
+#smog_alert img{
+	width: 18vw;
+	height: auto;
+	margin-top: 7vh;
+	font-size: 2em;
+	color: white;
+	font-weight: 500;
+	letter-spacing: 2px;
+
+}
+
+#dust1{
+	font-family: 'Dosis', sans-serif;
+	margin-top: 18vh;
+	font-size: 1.5em;
+	color: white;
+	font-weight: 500;
+	letter-spacing: 3px;
+	border:  2px solid #FF4040;
+	width : 30vw;
+	height: 10vh;
+	padding-top: 2vh;
+}
+
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    min-width: 130%;
+    min-height: 90%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+/* 	background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
+  	background-size: cover;
+  	transition: 1s opacity;
+}
+

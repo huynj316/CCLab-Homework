@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+
+	<head>
+<!-- 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ -->		<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>	
+		<link href='https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+	
+
+		<title>Messages</title>
+
+
+		<style>
+
+		body{
+			background-color: #00405f;
+		}
+
+		#head{
+			font-size: 5em;
+			font-family: 'Dosis', sans-serif;
+			font-weight: 200;
+			color: white;
+			margin-top: 15vh;
+			letter-spacing: 1vw;
+			text-transform: uppercase;
+
+		}
+		
+		#toParse{
+			text-decoration: none;
+			font-size: 3em;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 300;
+			color: white;
+			border: 2px solid white;
+			padding: 10px;
+			margin-top: 5vh;
+			padding-left: 30px;
+			padding-right: 30px;
+			letter-spacing: 3px;
+			cursor: pointer;
+	  		transition:.5s;
+	  		width: 66vw;
+			height: 4.5vh;
+			padding-top: 1.5vh;
+		}
+		input{
+			text-decoration: none;
+			font-size: 2em;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 300;
+			border: 1px solid white;
+			padding: 10px;
+			margin-top: 5vh;
+			width: 70vw;
+			height: 5vh;
+
+
+		}
+		textarea{
+			text-decoration: none;
+			font-size: 2em;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 300;
+			border: 1px solid white;
+			padding: 10px;
+			margin-top: 5vh;
+			width: 70vw;
+			height: 10vh;
+		}
+
+		</style>
+	</head>
+
+	<body style="margin: 0;border:0">
+
+
+
+
+		<center>
+		<div id="container">
+			<div id="head">Send Message to<br>B.O.T</div>
+			<div id="input">
+				<div id="boxes">
+			<form>
+			<input id="firstName" type="text" name="rval" placeholder="First Name"><br>
+			<input id="lastName" type="text" name="gval" placeholder="Last Name"><br>
+			<textarea id="message"></textarea>
+		</form>
+	</div>
+		<div id="toParse" onclick="sendMessage()">SEND</div>
+<!-- 		<button>SEND</button>
+ -->
+	</div><br>
+	</center>
+
+		<script src="http://192.168.1.100:3000/socket.io/socket.io.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		
+		<script>
+			var socket = io.connect('http://192.168.1.100:3000');
+
+			// function sendMessage(){
+				
+			// 	var firstName = document.getElementById('firstName').value;
+			// 	var lastName = document.getElementById('lastName').value;
+			// 	var msg = document.getElementById('msg').value;
+				
+			// 	socket.emit('sendMessage', { firstName: firstName, lastName: lastName, msg:msg});
+				
+			// }
+
+			function sendMessage(){
+				
+				
+				socket.emit('sendMessage', $('#message').val());
+				$('#message').val('');
+    			return false;
+				
+			}
+
+
+			// $('button').submit(function(){
+   //  		socket.emit('chat message', $('#msg').val());
+   //  		$('#msg').val('');
+   //  		return false;
+  	// 		});
+
+
+
+			
+
+		</script>
+	</body>
+</html>
