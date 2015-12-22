@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create</title>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+  <link rel="stylesheet" href="css/creative.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/ihover.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+
+<body>
+<!-- NAV -->
+<nav>
+    <div class="container-fluid">
+        <div class="navbar-header">
+             <a class="navbar-brand page-scroll" href="#page-top">STUDENTS TEACHING STUDENTS</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="#getstarted">Explore</a></li>
+                    <li><a class="page-scroll btn" href="#mission">Logout</a></li>
+                </ul>
+            </div>
+    </div>
+    </nav>
+<ol class="breadcrumb" class="" id="student_breadcrumbs">
+  <li> <a href="student_homepage.html">Pick Location</a></li>
+  <li> <a href="student_brainstorming.html">Brainstorm Ideas</a></li>
+  <li> <a href="student_research.html">Research</a></li>
+  <li><a href="student_structure.html">Structure</a></li>
+  <li class="#"> Create Lesson</li>
+  <li> <a href="student_upload.html">Record and Upload Lesson</a></li>
+</ol>
+
+
+<!-- INSTRUCTIONS -->
+  <div class="header-content" id="structureHeading">
+    <div class="header-content-inner" >
+      <h2>Step 5: Create you Lesson Plan</h2>
+      <p>Fill in the parts of your Lesson Plan</p>
+    </div>
+  </div>
+
+<!-- FORM -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <form action="" id="plan-form">
+
+          <div class="form-group input-group">
+            <h3>Pick A Lesson Title</h3>
+            <input id="plan-title"class="form-control" type="text" name="title" placeholder="Title"/>          
+          </div>
+
+          <div class="form-group">
+            <h3>Introduction</h3>
+            <textarea id="beginning_1"class="form-control" rows="6" type="password" name='beginning' placeholder="Define Culture"></textarea>
+            <br>
+            <br>
+            <textarea id="beginning_2"class="form-control" rows="6" type="password" name='beginning' placeholder="Introduce an Article"></textarea> 
+          </div>
+
+          <div class="form-group">
+            <h3>Middle</h3>
+            <textarea id="middle_1"class="form-control" rows="6" type="password" name='middle' placeholder="Describe Elements of Culture in the Country you Chose"></textarea>
+            <br>
+            <br>
+            <textarea id="middle_2"class="form-control" rows="6" type="password" name='middle' placeholder="Summarize the article"></textarea> 
+          </div>
+
+          <div class="form-group">
+            <h3>Conclusion</h3>
+            <textarea id="end_1"class="form-control" rows="6" type="password" name='end' placeholder="Explain the main lessons that you would like to teach the students"></textarea>
+
+          </div>
+          <div class="form-group">
+            <input class="btn btn-default btn-md"type="submit" id="plan-submit">
+          </div>
+
+        </form>        
+
+      </div>  
+    </div>
+  </div>
+<!-- NEXT PAGE -->
+  <section id="btnrow">
+    <div class="container">
+      <a href="student_upload.html" class="btn btn-default btn-xl" id="structureBtn">Upload your Lesson</a>
+    </div>
+  </section>
+
+<!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <hr class="primary">
+          <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+        </div>
+        <div class="col-lg-4 col-lg-offset-2 ">
+          <i class="fa fa-phone fa-3x wow bounceIn"></i>
+          <p>(646) 578-4485</p>
+        </div>
+        <div class="col-lg-4 ">
+          <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+          <p><a href="mailto:jourdanbousfield@gmail.com">studentsteachingstudents@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.fittext.js"></script>
+  <script src="js/wow.min.js"></script> 
+  <script src="js/creative.js"></script>
+
+
+  <script type="text/javascript">
+    Parse.initialize("59BFYG6eGRt19Bn7x0c2o3c68HkoLwAASXDlC0Jw", "p1T142WCRyAEJE7KWDrVfgQ119cjwBESXPf1E9gj");
+    
+    var Plan = Parse.Object.extend("Plan");
+
+    $("#plan-form").submit(function(event){
+      event.preventDefault();
+
+      var title = $("#plan-title").val();
+      var beginning_1= $("#beginning_1").val();
+      var beginning_2= $("#beginning_2").val();
+      var middle_1= $("#middle_1").val();
+      var middle_2= $("#middle_2").val();
+      var end_1= $("#end_1").val();
+
+      var newPlan = new Plan();
+      newPlan.set("title", title);
+      newPlan.set("beginning_1", beginning_1);
+      newPlan.set("beginning_2", beginning_2);
+      newPlan.set("middle_1", middle_1);
+      newPlan.set("middle_2", middle_2);
+      newPlan.set("end_1", end_1);
+      newPlan.save({
+
+        success: function(){
+
+        }, error:function(error){
+          console.log("Error:"+error.message);
+        }
+      });
+
+      });
+      </script>
+
+    </body>
+    </html>

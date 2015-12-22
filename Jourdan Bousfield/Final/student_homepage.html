@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Student Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/ihover.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="map/ammap.css" type="text/css">
+
+</head>
+
+<body>
+
+<nav>
+    <div class="container-fluid">
+        <div class="navbar-header">
+             <a class="navbar-brand page-scroll" href="index.html">Students Teaching Students</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="#getstarted">Explore</a></li>
+                    <li><a class="page-scroll btn" href="#mission">Logout</a></li>
+                </ul>
+            </div>
+    </div>
+</nav>
+<ol class="breadcrumb" class="" id="student_breadcrumbs">
+  <li class="#">Pick Location</li>
+  <li> <a href="student_brainstorming.html">Brainstorm Ideas</a></li>
+  <li> <a href="student_research.html">Research</a></li>
+  <li><a href="student_structure.html">Choose a Structure</a></li>
+  <li> <a href="student_create.html">Create a Lesson</a></li>
+  <li> <a href="student_upload.html">Record and Upload Your Lesson</a></li>
+</ol>
+
+	<div class="header-content" id="locationHeading">
+      <div class="header-content-inner" >
+ 	      <h1>Start Creating</h1>
+          <br>
+          <br>
+          <br> 
+        <h2>Step 1: Pick a Country</h2>
+        <p>Explore the globe to find a coutry your group finds interesting.</p>
+	     </div>
+
+<input id="enterLocation"type="text" placeholder="Enter Country" class="form-control input-lg">
+<button id="enterEnter"class="btn btn-default btn-lg">Enter</button>
+
+
+<div id="map" style="width: 100%; height: 600px;"></div>
+
+
+
+
+
+<section id="btnrow">
+    <div class="container" >
+        <a href="student_brainstorming.html" class="btn btn-default btn-xl" id="structureBtn">Start Brainstorming</a>
+    </div>
+</section>
+
+	<section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                    <p>(646) 578-4485</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:jourdanbousfield@gmail.com">studentsteachingstudents@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>   
+<script src="js/creative.js"></script>
+<script src="js/script.js"type="text/javascript"></script>
+
+<script src="map/ammap.js" type="text/javascript"></script>
+<script src="map/worldLow.js" type="text/javascript"></script>
+<script src="map/continentsLow.js" type="text/javascript"></script>
+
+<script type="text/javascript">    
+// MAP
+
+AmCharts.makeChart("map",{
+                    "type": "map",
+                    "pathToImages": "http://www.amcharts.com/lib/3/images/",
+                    "addClassNames": true,
+                    "fontSize": 18,
+                    "color": "#FFFFFF",
+                    "backgroundAlpha": 1,
+                    "backgroundColor": "rgba(80,80,80,0)",
+                    "dataProvider": {
+                        "map": "worldLow",
+                        "getAreasFromMap": true,
+                        "images": [
+                            {
+                                "top": 40,
+                                "left": 60,
+                                "width": 80,
+                                "height": 40,
+                                "pixelMapperLogo": true,
+                                "imageURL": "http://pixelmap.amcharts.com/static/img/logo.svg",
+                                "url": "http://www.amcharts.com"
+                            }
+                        ]
+                    },
+                    "balloon": {
+                        "horizontalPadding": 15,
+                        "borderAlpha": 0,
+                        "borderThickness": 1,
+                        "verticalPadding": 15
+                    },
+                    "areasSettings": {
+                        "color": "rgba(155,196,63,1)",
+                        "outlineColor": "rgba(51,55,69,0)",
+                        "rollOverOutlineColor": "rgba(155,196,63,1)",
+                        "rollOverBrightness": 20,
+                        "selectedBrightness": 20,
+                        "selectable": true,
+                        "unlistedAreasAlpha": 0,
+                        "unlistedAreasOutlineAlpha": 0
+                    },
+                    "imagesSettings": {
+                        "alpha": 1,
+                        "color": "rgb(155,196,63)",
+                        "outlineAlpha": 0,
+                        "rollOverOutlineAlpha": 0,
+                        "outlineColor": "rgba(155,196,63,0)",
+                        "rollOverBrightness": 20,
+                        "selectedBrightness": 20,
+                        "selectable": true
+                    },
+                    "linesSettings": {
+                        "color": "rgba(155,196,63,1)",
+                        "selectable": true,
+                        "rollOverBrightness": 20,
+                        "selectedBrightness": 20
+                    },
+                    "zoomControl": {
+                        "zoomControlEnabled": true,
+                        "homeButtonEnabled": false,
+                        "panControlEnabled": false,
+                        "right": 38,
+                        "bottom": 30,
+                        "minZoomLevel": 0.25,
+                        "gridHeight": 100,
+                        "gridAlpha": 0.1,
+                        "gridBackgroundAlpha": 0,
+                        "gridColor": "#FFFFFF",
+                        "draggerAlpha": 1,
+                        "buttonCornerRadius": 2
+                    }
+                });
+
+
+
+
+
+            function handleGoHome() {
+                map.dataProvider = continentsDataProvider;
+                map.validateNow();
+            }
+
+            AmCharts.ready(function() {
+                map = new AmCharts.AmMap();
+
+
+                var worldDataProvider = {
+                    mapVar: AmCharts.maps.worldLow,
+                    getAreasFromMap:true
+                };
+
+                map.areasSettings = {
+                    autoZoom: true,
+                    rollOverOutlineColor: "#000000",
+                    selectedColor: "#BBBB00",
+                    color: "#BBBB00"
+                };
+
+                continentsDataProvider = {
+                    mapVar: AmCharts.maps.continentsLow,
+
+                    areas: [
+                        {
+                        id: "africa",
+                        linkToObject: worldDataProvider,
+                        color: "#723C1A",
+                        passZoomValuesToTarget: true},
+                    {
+                        id: "asia",
+                        linkToObject: worldDataProvider,
+                        color: "#C8AB67",
+                        passZoomValuesToTarget: true},
+                    {
+                        id: "australia",
+                        linkToObject: worldDataProvider,
+                        color: "#93644A",
+                        passZoomValuesToTarget: true},
+                    {
+                        id: "europe",
+                        linkToObject: worldDataProvider,
+                        color: "#AA805A",
+                        passZoomValuesToTarget: true},
+                    {
+                        id: "north_america",
+                        linkToObject: worldDataProvider,
+                        color: "#8D725F",
+                        passZoomValuesToTarget: true},
+                    {
+                        id: "south_america",
+                        linkToObject: worldDataProvider,
+                        color: "#BE8045",
+                        passZoomValuesToTarget: true}]
+                };
+
+                var backButton = {
+                    svgPath: backIconSVG,
+                    label: "Back to continents map",
+                    rollOverColor: "#CC0000",
+                    labelRollOverColor: "#CC0000",
+                    useTargetsZoomValues: true,
+                    linkToObject: continentsDataProvider,
+                    left: 30,
+                    bottom: 30,
+                    labelFontSize: 15
+                };
+
+                worldDataProvider.images = [backButton];
+
+                map.dataProvider = continentsDataProvider;
+
+                // monitor when home icon was clicked and also go to continents map
+                map.addListener("homeButtonClicked", handleGoHome);
+
+                map.write("mapdiv");
+
+            });
+
+</script>
+	
+</body>
+
+</html>

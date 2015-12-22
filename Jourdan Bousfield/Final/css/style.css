@@ -1,0 +1,407 @@
+/*nav*/
+#student-nav{
+background-color: #EDF7F2;
+}
+#student_breadcrumbs{
+	height: 5vh;
+	background-color: #EDF7F2;
+}
+#student_breadcrumbs li{
+	float: left;
+	
+}
+#teacher_nav{
+	background-color: #EDF7F2;
+}
+#teacher_nav #logout{
+	margin-top: 1vh;
+	    background-color: #333745;
+    color: #EDF7F2;
+}
+/*index*/
+#viewStudent{
+	margin-top:3vh;
+	float:left;
+	margin-left: 25%;
+}
+#viewTeacher{
+	margin-top: 3vh;
+	float: right;
+	margin-right: 25%;
+}
+
+/*student landing*/
+#main{
+	margin-left: 3vw;
+}
+#enterLocation{
+	width: 15vw;
+	float: left;
+	margin-left:35vw;
+	margin-bottom: 8vh; 
+}
+#enterEnter{
+	float: left;
+	margin-left: 2vw;
+	margin-left: 8vh;
+}
+/*Teacher Registration*/
+#create-class{
+	margin-top: 15vh;
+}
+#signup-name {
+	margin-top: 2vh;
+	width: 35vw;
+}
+#signup-password{
+	margin-top: 2vh;
+	width: 35vw;
+}
+#create-account{
+	margin-bottom: 2vh;
+	margin-left: 35vw;
+}
+
+/*login*/
+#login{
+	margin-top: 15vh;
+	margin-left: 35vw;
+
+}
+#login-submit{
+	margin-bottom: 2vh;
+}
+#login-cancel{
+	margin-bottom: 2vh;
+}
+#forgotpassword{
+	margin-left: 10vw;
+}
+
+
+/*signup*/
+#slogin{
+	margin-top: 15vh;
+	margin-left: 35vw;
+}
+
+#slogin-group{
+	margin-top: 2vh;
+	width: 35vw;
+
+}
+#slogin-password{
+	margin-top: 2vh;
+	width: 35vw;
+
+}
+#slogin-submit{
+	margin-bottom: 2vh;
+}
+
+/*Pick Location*/
+#locationHeading {
+	margin-top: 15vh;
+	height: 20vh;
+	margin-bottom: 10vh;
+}
+
+#nextrow{
+	height: 10vh;
+	background-color: #95C92C;
+}
+
+#map{
+	margin-bottom: 3vh;
+	margin-top: 3vh;
+}
+
+#amcharts-bg{
+	background-color: black;
+}
+/*form structure*/
+#suggestions{
+	float: left;
+}
+#categories{
+
+
+
+}
+
+#structureHeading{
+	margin-top: 50px;
+	
+}
+#circlerow{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#circlerow h3{
+	margin-left: -10vw;
+}
+
+#circle1{
+	margin-left: 10%;
+}
+
+#step2{
+	margin-top: 50px;
+	margin-bottom: 70px;
+}
+#suggestions ul{
+list-style-type: none;
+text-align: left;
+}
+
+#btitle{
+	height: 5vh;
+	background-color: #EDF7F2;
+	margin-bottom: 5vh;
+	text-align: center;
+
+}
+#btitle h3{
+	float: left;
+
+}
+
+
+
+#structureBtn{
+	margin-left: 40%;
+}
+#btnrow{
+	padding-top: 2vh;
+    padding-bottom: 2vh;
+	background-color:#95C92C;
+}
+#btnrow1{
+
+    padding-bottom: 2vh;
+	background-color:#95C92C;
+	margin-top: 550px;
+}
+#structureSection{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    /* float: left; */
+      margin-left: 10%;
+}
+}
+
+#topic-title{
+	text-align: left;
+	margin-left: -2VW;
+}
+
+#topic-title1{
+	text-align: left;
+	margin-left: 2vw;
+}
+
+#bubble_info p{
+	margin-top: 6vh;
+}
+
+
+/*brainstorming*/
+#row3{
+margin-left: 0vw;
+ margin-right: -25vw;
+}
+#aspects-life{
+	margin-top: -20vh;
+	margin-bottom: -900px;
+}
+#aspects-life ul{
+	list-style-type: none;
+}
+#aspects-life li{
+	margin-bottom: 10px;
+}
+#topicIdeas{
+	float: left;
+}
+
+#brainstormingTable{
+	width: 60%;
+}
+/*mindmap*/
+#columns{
+	height: 160vh;
+}
+
+#columns ul{
+	list-style: none;
+}
+#column1{
+float:left;
+margin-top: 180px;
+}
+
+#column2{
+float: left;
+
+}
+
+#column2 li{
+	margin-top: 80px;
+
+}
+#column3{
+	float:left;
+	margin-top: 50px;
+}
+
+#column4{
+	float: left;
+}
+#break3{
+	height: 20px;
+}
+#beliefsAdd{
+
+}
+
+#cultureSuggestions{
+	height: 35vh;
+	width: 25vh;
+	background-color: rgba(51, 55, 69, 0.6);
+	color: white;
+}
+
+#cultureSuggestions p{
+font-size: 8pt;
+}
+	/*nodes*/
+#columns{
+margin-left: 20vw;
+}
+/*teacher Summary*/
+
+#list-plans{
+	list-style: none;
+	text-align: left;
+	padding-left: 10%;
+    width: 100%;
+
+}
+#list-plans h2{
+background-color: #EDF7F2;
+}
+	
+/*teacher class list*/
+#new-class{
+	margin-bottom: -10vh;
+}
+#classList {
+	list-style: none;
+	margin-left: 20vw;
+}
+
+#classList li{
+	margin-top: 3vh;
+}
+
+
+#firstStudent1{
+	width: 25%;
+	float: left;
+	margin-right: 2vw;
+}
+#lastStudent1{
+	width: 25%;
+	float: left;
+	margin-right: 2vw;
+}
+
+#firstStudent2{
+	width: 25%;
+	float: left;
+	margin-right: 2vw;
+}
+#lastStudent2{
+	width: 25%;
+	float: left;
+	margin-right: 2vw;
+}
+
+#firstStudent3{
+	width: 25%;
+	float: left;
+	margin-right: 2vw;
+}
+#lastStudent3{
+	width: 25%;
+	float: left;
+	margin-right: 2vw;
+}
+
+#firstStudent4{
+	width: 25%;
+	float: left;
+	margin-right: 2vw;
+}
+#lastStudent4{
+	width: 25%;
+	float: left;
+	margin-right: 2vw;
+}
+
+
+#addStudent{
+
+	margin-right: 2vw;
+}
+/*teacher create group*/
+#groupNames{
+	width: 40%;
+}
+
+#creategroup ul{
+list-style: none;
+width: 40%;
+}
+
+#createCode{
+	width: 30%;
+}
+
+#formHeading{
+	text-align: left;
+}
+/*techer review*/
+#lessonList{
+	margin-top: 5vh;
+}
+
+#suggn1{
+	display: none;
+}
+#suggn2{
+	display: none;
+}
+#suggn3{
+	display: none;
+}
+#catTable{
+	width: 80%;
+
+}
+
+#dropZone{
+	width: 40%;
+	margin-left: 30%;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+#studentWork{
+	width: 40%;
+	float: left;
+	margin-left: 3%;
+	margin-top: 70px;
+	margin-bottom: 50px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Upload</title>
+	  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+  <link rel="stylesheet" href="css/creative.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dropzone.css">
+
+</head>
+<body>
+<!-- NAV -->
+
+<nav>
+    <div class="container-fluid">
+        <div class="navbar-header">
+             <a class="navbar-brand page-scroll" href="index.html">Students Teaching Students</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="#getstarted">Explore</a></li>
+                    <li><a class="page-scroll btn" href="student_login.html">Logout</a></li>
+                </ul>
+            </div>
+    </div>
+  </nav>
+<ol class="breadcrumb" class="" id="student_breadcrumbs">
+  <li class="student_homepage.html"><a href="#">Pick Location</a></li>
+  
+  <li> <a href="student_barinstorm.html">Brainstorm Ideas</a></li>
+  <li> <a href="strudent_research.html">Research</a></li>
+  <li><a href="student_structure.html">Choose a Structure</a></li>
+  <li> <a href="student_create.html">Create Lesson</a></li>
+  <li class="#">Record and Upload Lesson</li>
+</ol>
+
+
+    <div class="header-content" id="structureHeading">
+            <div class="header-content-inner" >
+                <h2>Step 6: Record and Upload Lesson Plan</h2>
+                <p>Create a video or voice recording of your lesson so that you can Share it!</p>
+            </div>
+        </div>
+
+
+
+<div id="dropZone">
+<form action="/upload-target" class="dropzone"></form>
+</div>
+
+<section id="btnrow">
+  <div class="container" >
+    <a href="index.html" class="btn btn-default btn-xl" id="structureBtn">Finished!</a>
+  </div>
+</section>
+
+    <section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="section-heading">Let's Get In Touch!</h2>
+                <hr class="primary">
+                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            </div>
+            <div class="col-lg-4 col-lg-offset-2 ">
+                <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                <p>(646) 578-4485</p>
+            </div>
+            <div class="col-lg-4 ">
+                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p><a href="mailto:jourdanbousfield@gmail.com">studentsteachingstudents@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>   
+<script src="js/creative.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/script.js"type="text/javascript"></script>
+    <script type="text/javascript">
+    Parse.initialize("59BFYG6eGRt19Bn7x0c2o3c68HkoLwAASXDlC0Jw", "p1T142WCRyAEJE7KWDrVfgQ119cjwBESXPf1E9gj");
+    var Plan = Parse.Object.extend("Plan");
+
+    $("#plan-form").submit(function(event){
+      event.preventDefault();
+
+      var title = $("#plan-title").val();
+      var beginning_1= $("#beginning_1").val();
+      var beginning_2= $("#beginning_2").val();
+      var middle_1= $("#middle_1").val();
+      var middle_2= $("#middle_2").val();
+      var end_1= $("#end_1").val();
+
+      var newPlan = new Plan();
+      newPlan.set("title", title);
+      newPlan.set("beginning_1", beginning_1);
+      newPlan.set("beginning_2", beginning_2);
+      newPlan.set("middle_1", middle_1);
+      newPlan.set("middle_2", middle_2);
+      newPlan.set("end_1", end_1);
+
+
+
+// get file from form input
+    var fileElement = $("#plan-file")[0];
+    var filePath = $("plan-file").val();
+    var fileName = filePath.split("\\").pop();
+
+    if(fileElement.files.length > 0){
+        var file = fileElement.files[0];
+        var newFile = new Parse.File (fileName, file);
+        
+        newFile.save({success: function(){
+
+        }, error: function(file, error){
+            console.log("file Save Error:" +error.message);
+        }
+    });
+    
+    } else{
+              newPlan.save({
+
+        success: function(){
+            getPosts();
+        }, error:function(error){
+          console.log("Error:"+error.message);
+        }
+      });
+    }
+ });
+    </script>
+</body>
+</html>
